@@ -1,0 +1,36 @@
+#mainNav .navbar-nav .nav-item .nav-link {
+    font-size: 100%;
+    font-weight: 600;
+    color: white;
+}
+
+
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: #fed136;
+}
+
+body {
+    text-align: right;
+    direction: rtl;
+}
+
+@media (min-width: 992px) {
+    #mainNav {
+      background-color : #1f1e1d8f;
+    }
+}
+
+
+@media (min-width: 992px) {
+    #mainNav.navbar-shrink {
+        background-color: #1f1e1d8f;
+    }
+}
+
+.masthead{
+    margin: 0;
+}
+
+#content{
+    margin: 100px;
+}
