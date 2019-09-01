@@ -6,3 +6,6 @@ def index (request):
 
 def cooperation(request):
     return render(request, 'cooperation.html')
+
+def farakhan(request):
+    return render(request, 'farakhan.html')

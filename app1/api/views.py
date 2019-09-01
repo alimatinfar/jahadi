@@ -11,9 +11,9 @@ from rest_framework.permissions import (
 from rest_framework.filters import SearchFilter, OrderingFilter
 
 from .permissions import OwnerCanManageReadOnly
-from app1.models import Profile, Hamkari, User
+from app1.models import Profile, Hamkari, User, Farakhan, Profile_present, Profile_ready
 from rest_framework.authentication import TokenAuthentication
-from .serializers import ProfileSerializer, HamkariSerializer, LoginSerilizer, Userserializer
+from .serializers import ProfileSerializer, HamkariSerializer, LoginSerilizer, Userserializer, Farakhanserializer, Profile_presentserializer, Profile_readyserializer
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from rest_framework.response import Response
@@ -95,4 +95,66 @@ class UserUpdateDeleteAPIView(generics.RetrieveUpdateDestroyAPIView):
     # permission_classes = [IsAuthenticated]
 
     serializer_class = Userserializer
+    lookup_field = 'id'
+
+
+class FarakhanListCreateAPIView(generics.ListCreateAPIView):
+    queryset = Farakhan.objects.all()
+    serializer_class = Farakhanserializer
+    # filter_backends = (DjangoFilterBackend, SearchFilter)
+    # filterset_fields = ('owner__username', 'content', 'title')
+    # search_fields = ('owner__username', 'content', 'title')
+    lookup_field = 'id'
+    # authentication_classes = [TokenAuthentication]
+    # permission_classes = [IsAuthenticated]
+
+
+class FarakhanUpdateDeleteAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Farakhan.objects.all()
+
+    # authentication_classes = [TokenAuthentication]
+    # permission_classes = [IsAuthenticated]
+
+    serializer_class = Farakhanserializer
+    lookup_field = 'id'
+
+class Profile_readyListCreateAPIView(generics.ListCreateAPIView):
+    queryset = Profile_ready.objects.all()
+    serializer_class = Profile_readyserializer
+    # filter_backends = (DjangoFilterBackend, SearchFilter)
+    # filterset_fields = ('owner__username', 'content', 'title')
+    # search_fields = ('owner__username', 'content', 'title')
+    lookup_field = 'id'
+    # authentication_classes = [TokenAuthentication]
+    # permission_classes = [IsAuthenticated]
+
+
+class Profile_readyUpdateDeleteAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Profile_ready.objects.all()
+
+    # authentication_classes = [TokenAuthentication]
+    # permission_classes = [IsAuthenticated]
+
+    serializer_class = Profile_readyserializer
+    lookup_field = 'id'
+
+
+class Profile_presentListCreateAPIView(generics.ListCreateAPIView):
+    queryset = Profile_present.objects.all()
+    serializer_class = Profile_presentserializer
+    # filter_backends = (DjangoFilterBackend, SearchFilter)
+    # filterset_fields = ('owner__username', 'content', 'title')
+    # search_fields = ('owner__username', 'content', 'title')
+    lookup_field = 'id'
+    # authentication_classes = [TokenAuthentication]
+    # permission_classes = [IsAuthenticated]
+
+
+class Profile_presentUpdateDeleteAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Profile_present.objects.all()
+
+    # authentication_classes = [TokenAuthentication]
+    # permission_classes = [IsAuthenticated]
+
+    serializer_class = Profile_presentserializer
     lookup_field = 'id'

@@ -52,10 +52,18 @@ class Farakhan(models.Model):
         ('e', 'ehda'),
     ]
 
-
-    title = models.CharField(max_length=200)
     date_first = models.DateField()
     date_end = models.DateField()
     place = models.CharField(max_length=200)
     hamkari_title = models.CharField(max_length=400)
-    kamkari_type = models.CharField(max_length=1, choices=HAMKARI)
+    hamkari_type = models.CharField(max_length=1, choices=HAMKARI)
+
+
+class Profile_ready(models.Model):
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    farakhan = models.ForeignKey(Farakhan, on_delete=models.CASCADE)
+
+
+class Profile_present(models.Model):
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    farakhan = models.ForeignKey(Farakhan, on_delete=models.CASCADE)

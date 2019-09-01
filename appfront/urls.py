@@ -6,5 +6,6 @@ app_name = 'appfront'
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^cooperation/$', views.cooperation, name='cooperation'),
+    url(r'^farakhan/$', views.farakhan, name='farakhan'),
 
 ]

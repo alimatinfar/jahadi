@@ -1,5 +1,5 @@
 from rest_framework import serializers, exceptions
-from app1.models import Profile, Hamkari
+from app1.models import Profile, Hamkari, Farakhan, Profile_present, Profile_ready
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 
@@ -61,4 +61,22 @@ class HamkariSerializer(serializers.ModelSerializer):
 class Userserializer(serializers.ModelSerializer):
     class Meta:
         model = User
+        fields = "__all__"
+
+
+class Farakhanserializer(serializers.ModelSerializer):
+    class Meta:
+        model = Farakhan
+        fields = "__all__"
+
+
+class Profile_readyserializer(serializers.ModelSerializer):
+    class Meta:
+        model = Profile_ready
+        fields = "__all__"
+
+
+class Profile_presentserializer(serializers.ModelSerializer):
+    class Meta:
+        model = Profile_present
         fields = "__all__"
