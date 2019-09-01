@@ -289,7 +289,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app1/admin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -352,11 +352,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/appfront/templates/farakhan.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="84" column="81" selection-start-line="84" selection-start-column="67" selection-end-line="84" selection-end-column="81" />
+            <state relative-caret-position="125">
+              <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -422,10 +422,10 @@
         <option value="$PROJECT_DIR$/app1/models.py" />
         <option value="$PROJECT_DIR$/app1/api/serializers.py" />
         <option value="$PROJECT_DIR$/app1/api/views.py" />
-        <option value="$PROJECT_DIR$/appfront/templates/farakhan.html" />
         <option value="$PROJECT_DIR$/app1/api/urls.py" />
         <option value="$PROJECT_DIR$/appfront/static/js/forms/form-data-farakhan.js" />
         <option value="$PROJECT_DIR$/app1/admin.py" />
+        <option value="$PROJECT_DIR$/appfront/templates/farakhan.html" />
       </list>
     </option>
   </component>
@@ -533,18 +533,18 @@
       <updated>1566672317671</updated>
       <workItem from="1566672319848" duration="20986000" />
       <workItem from="1566891313544" duration="28779000" />
-      <workItem from="1567240846090" duration="7681000" />
+      <workItem from="1567240846090" duration="8162000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57446000" />
+    <option name="totallyTimeSpent" value="57927000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13739946" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13739946" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -558,7 +558,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.32956153" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49932975" visible="true" weight="0.32956153" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49932975" visible="true" weight="0.32956153" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -802,13 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appfront/templates/farakhan.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="84" column="81" selection-start-line="84" selection-start-column="67" selection-end-line="84" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/appfront/static/js/forms/form-data-farakhan.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
@@ -823,6 +816,13 @@
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appfront/templates/farakhan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="41" />
         </state>
       </provider>
     </entry>
