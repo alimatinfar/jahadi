@@ -50,8 +50,9 @@ function loadDoc() {
     var sakht = inputsakht.checked;
     var amoozesh = inputamoozesh.checked;
     var farhangi = inputfarhangi.checked;
+    var national_code = inputNationalCode.value;
 
-    form.append("profile", id_profile);
+    form.append("national_code", national_code);
     form.append("darman", darman);
     form.append("sakht", sakht);
     form.append("amoozesh", amoozesh);
@@ -67,7 +68,7 @@ function loadDoc() {
     var settings3 = {
         "async": true,
         "crossDomain": true,
-        "url": "http://127.0.0.1:8000/api/create_cooperation/",
+        "url": "http://127.0.0.1:8000/api/create_cooperation_code/",
         "method": "POST",
         dataType: "JSON",
         "headers": {
@@ -89,7 +90,7 @@ function loadDoc() {
         "data": form
     }
     $.ajax(settings3).done(function (response) {
-        window.alert('موفقیت همکاری');
+        window.alert('موفقیت همکاری با کد ملی');
         console.log(response)
     });
 

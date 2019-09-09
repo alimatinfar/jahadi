@@ -26,6 +26,21 @@
 
                 <div class="col-md-12">
                     <div class="form-group">
+                        <h4 class="mt-5">برای همکاری کد ملی خود را وارد بفرمایید.</h4>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="inputNationalCode" class="form-label">کد ملی</label>
+                        <input type="text" class="form-control" id="inputNationalCode"
+                               name="national_code" required>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
                         <h4 class="mt-5">نوع همکاری خود در گروه جهادی را مشخص نمایید : </h4>
                         <hr>
                     </div>
@@ -237,10 +252,6 @@
 {% block extrajs %}
 
     <!-- selects js -->
-    <script>
-        var id_profile =
-        {{ id_profile }}
 
-    </script>
-    <script type="text/javascript" src='{% static 'js/forms/form-data-hamkari.js' %}'></script>
+    <script type="text/javascript" src='{% static 'js/forms/form-data-hamkari_code.js' %}'></script>
 {% endblock %}

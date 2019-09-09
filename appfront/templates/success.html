@@ -1,0 +1,175 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block extracss %}
+    <!-- select css -->
+
+    {#    <link rel="stylesheet" href='{% static 'datepicker2/css/persianDatepicker-default.css' %}'/><!-- datepicker -->#}
+
+    {#    <link rel="stylesheet" href="{% static 'assets_admin_panel/css/bootstrap.min.css' %}"/>#}
+    {#    <link rel="stylesheet" href="{% static '/assets_admin_panel/css/bootstrap-datepicker.min.css' %}"/>#}
+
+    <style>
+        #coachpg {
+            background: #24e5be;
+        }
+
+    </style>
+{% endblock %}
+
+{% block slider %}
+{% endblock slider %}
+
+{% block content %}
+<div class="container">
+    <div class="col-md-12 mt-lg-5" style="background-color:#cbd3da;border: 2px">
+        <div class="alert alert-success" style="height: 70px;padding-top: 20px">
+            <strong>با سپاس از شما ، همکاری به شرح زیر با موفقیت ثبت گردید :</strong>
+        </div>
+        <hr>
+        <form id="validation-form123" action="" style="margin-right: 60px;margin-top: 40px">
+            <div class="row mr-lg-5">
+                <div class="col-md-5" style="background-color: antiquewhite">
+                    <div class="form-group">
+                        <p>
+                            نام و نام خانوادگی :
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-5" style="background-color: darkolivegreen">
+                    <div class="form-group">
+                        <p>
+                            علی طهماسبی
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-5" style="background-color: red">
+                    <div class="form-group">
+                        <p>
+                            مبلغ نقدی :
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-5" style="background-color: blue">
+                    <div class="form-group">
+                        <p>
+                            1/000/0000 ریال
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-5" style="background-color: green">
+                    <div class="form-group">
+                        <p>
+                            اهدای اجناس :
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-5" style="background-color: pink">
+                    <div class="form-group">
+                        <p>
+                            5 عدد پتو و 200 عدد دفتر مشق
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-5" style="background-color: lightblue">
+                    <div class="form-group">
+                        <p>
+                            خدمات :
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-5" style="background-color: lightcoral">
+                    <div class="form-group">
+                        <p>
+                            خدمات پزشکی و ویزیت رایگان
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-5" style="background-color: #e0a800">
+                    <div class="form-group">
+                        <p>
+                            اردوی جهادی
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-5" style="background-color: aqua">
+                    <div class="form-group">
+                        <p>
+                            دانشگاه علوم پزشکی بابل
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-5" style="background-color: #ed969e">
+                    <div class="form-group">
+                        <p>
+                            زمان :
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-5" style="background-color: #abdde5">
+                    <div class="form-group">
+                        <p>
+                            17 مرداد الی 3 شهریور
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-5" style="background-color: darkgreen">
+                    <div class="form-group">
+                        <p>
+                            مکان :
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-5" style="background-color: #ae81ff">
+                    <div class="form-group">
+                        <p>
+                            منطقه بندپی شهرستان بابل
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-5" style="background-color: #5a6268">
+                    <div class="form-group">
+                        <p>
+                            شماره پیگیری :
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-5" style="background-color: darkorchid">
+                    <div class="form-group">
+                        <p>
+                            227950965
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+{% block extrajs %}
+
+    <!-- selects js -->
+    <script>
+        var id_profile =
+        {{ id_profile }}
+
+    </script>
+    <script type="text/javascript" src='{% static 'js/forms/form-data-hamkari.js' %}'></script>
+{% endblock %}

@@ -20,14 +20,65 @@
 {% endblock slider %}
 
 {% block content %}
-    <div class="col-md-12 mt-lg-5" style="border: 2px">
-        <form id="validation-form123" action="">
-            <div class="row mr-lg-5">
 
+    <!-- دامه همکاری
+      -->
+
+    <div class="container mt-4 shadow" style="background-color: silver;height: 370px">
+        <div class="row">
+            <div class="col-12 mt-4" style="background-color: #d4edda;height: 60px">
+                <h3>
+                    همکاری در اردوی جهادی دانشگاه بابل در بند پی
+                </h3>
+            </div>
+            <div class="col-8" style="background-color: #f1b0b7;height: 120px">
+                <p>
+                    به گزارش روابط عمومی و امور بین الملل دانشگاه علوم پزشکی بابل
+                    بسیج با همکاری کانون جهادی دانشگاه ، اردوی جهادی بهداشتی - درمانی ،
+                    عمرانی ، فرهنگی ، تربیتی برگزار میکند .
+                    گفتنی است اردوی جهادی در منطقه بندپی شرقی بابل برگزار میگردد
+                    و زمان برگزاری اردو 27 مرداد لغایت 3 شهریور
+                    می باشد .
+                </p>
+            </div>
+            <div class="col-3 mr-lg-5" style="background-color: #f7ba5c;height: 120px">
+                <img src="1.jpg" style="width: 240px;height: 160px">
+            </div>
+            <div class="col-4" style="background-color: #1e7e34;height: 60px">
+
+                <p>
+                    <label>مکان :</label>
+                    منطقه بندپی شهرستان بابل
+                </p>
+            </div>
+            <div class="col-4" style="background-color: #24e5be;height: 60px">
+
+                <p>
+                    <label>زمان :</label>
+                    27 مرداد الی 3 شهریور
+                </p>
+            </div>
+            <div class="col-8" style="background-color: lightblue;height: 60px">
+
+                <p>
+                    <label>همکاری های مورد نیاز :</label>
+                    خدمات بهداشتی - خدمات پزشکی - خدمات آموزشی
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Noe Hamkari-->
+
+    <div class="container mt-lg-5 p-0">
+        <div class="col-md-12 " style="background-color:#cbd3da;border: 2px;padding: 30px">
+            <div class="row mr-lg-5">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <h4 class="mt-5">نوع همکاری خود در گروه جهادی را مشخص نمایید : </h4>
-                        <hr>
+                        <h4 class="mt-5">نوع همکاری خود در این اردو را انتخاب نمایید : </h4>
+                        <br>
                     </div>
                 </div>
 
@@ -70,6 +121,19 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>مبلغ :</label>
+                        <input type="text" class="form-control" placeholder="ریال" name="text1">
+                    </div>
+                </div>
+
+                <div class="col-md-10">
+                    <br><br>
+                    <hr>
                 </div>
 
 
@@ -134,6 +198,20 @@
                     </div>
                 </div>
 
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <div class="form-check-inline">
+                                <input type="checkbox" class="custom-control-input" id="inputmasaleh">
+                                <label class="custom-control-label" for="inputmasaleh">
+                                    سایر
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-md-6">
                     <div class="form-group">
                         <div class="custom-control custom-checkbox">
@@ -145,6 +223,19 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label>شرح اجناس :</label>
+                        <textarea type="textarea" class="form-control" placeholder="ریال" name="text1" rows="5">
+                        </textarea>
+                    </div>
+                </div>
+
+                <div class="col-md-10">
+                    <br><br>
+                    <hr>
                 </div>
 
 
@@ -211,27 +302,48 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+
+                <div class="col-md-5">
                     <div class="form-group">
-                        <div class="custom-control custom-checkbox">
-                            <div class="form-check-inline mr-3">
-                            </div>
-                        </div>
+                        <label>شرح خدمات :</label>
+                        <textarea type="textarea" class="form-control" placeholder="ریال" name="text1" rows="5">
+                        </textarea>
                     </div>
                 </div>
 
-                <div class="col-md-6">
-                    <br>
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-10">
+                    <br><br>
+                    <hr>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 mt-lg-5">
                     <div class="form-group row">
                         <button id="createProfileFormSubmit" type="submit"
                                 class="btn btn-success btn-lg mr-lg-5"
-                                style="width: 200px;height: 60px;font-size: 19pt">ثبت نام
+                                style="width: 200px;height: 60px;font-size: 19pt">ادامه
                         </button>
                     </div>
                 </div>
+
             </div>
-        </form>
+        </div>
     </div>
+
+
 {% endblock %}
 
 {% block extrajs %}

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
-
+{% load static %}
 <head>
 
     <meta charset="utf-8">
@@ -9,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Agency - Start Bootstrap Theme</title>
+    <title>خانه</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
@@ -28,418 +27,597 @@
     <link href="{% static 'css/mycss.css' %}" rel="stylesheet" type="text/css">
 
 
+    <!-- Carousel-->
+    {#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>#}
+    {#    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>#}
+    {#    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>#}
+
+    {#    <script type="text/javascript" src="{% static 'js/js1.js' %}"></script>#}
+
+
     {% block extrahead %}
     {% endblock %}
     {% block extracss %}{% endblock %}
 </head>
 
-<body id="page-top">
+
+<body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="50"
+      style="background-color:rgb(243, 243, 243)">
+
+<div id="header" class="container">
+    <img class="mr-0 p-0 container shadow  mb-2 "
+         src="{% static 'img/header3.jpg' %}" style="width: 100%;
+         height: 200px;padding: 0;display: block">
+</div>
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="{% url 'appfront:cooperation' %}">همکاری در گروه جهادی</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#portfolio">ورود</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="{% url 'appfront:index' %}">خانه</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top container">
+    <ul class="navbar-nav" id="rightnav" style="float: right;bacground-color: lawngreen">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'appfront:index' %}" style="color: ivory">خانه</a>
+        </li>
+        {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'appfront:profile' %}" style="color: ivory">پروفایل</a>
+            </li>
+        {% endif %}
+
+        {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'appfront:cooperation' %}" style="color: ivory">همکاری</a>
+            </li>
+        {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'appfront:cooperation_code' %}" style="color: ivory">همکاری</a>
+            </li>
+        {% endif %}
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'appfront:folder_gallery' %}" style="color: ivory">گالری</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#faaliat" style="color: ivory">فعالیت های ما</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#aboutus" style="color: ivory">درباره ما</a>
+        </li>
+        {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'appfront:logout' %}" style="color: ivory">خروج</a>
+            </li>
+        {% endif %}
+
+
+    </ul>
+    <ul class="navbar-nav " id="leftnav"
+        style="float: left;background-clor: khaki;margin-right: auto;margin-left: 50px">
+        <li class="nav-item " style="float: left">
+            <a class="nav-link rounded" href="{% url 'appfront:register' %}"
+               style="color: ivory ;float: left;background-color: forestgreen;width: 90px;text-align: center">ثبت
+                نام</a>
+        </li>
+        <li class="nav-item" style="float: left">
+            <a class="nav-link" href="{% url 'appfront:login' %}" style="color: ivory ;float: left">ورود</a>
+        </li>
+    </ul>
 </nav>
 
-<!-- Header -->
-<header class="masthead">
-    <div class="container">
-        <div class="intro-text">
+
+{% block slider %}
+
+    <div class="container " style="margin-top: 40px">
+        <div id="demo" class="carousel slide" data-ride="carousel" style="height: 400px">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'img/3.jpg' %}" alt="اردوی جهادی1"
+                         style="width: 750px;height:400px;display: block" class="mx-auto">
+                    <div class="carousel-caption mx-auto rounded"
+                         style="background-color: rgba(88,88,88,0.68);width: 60%">
+                        <h3>رهبر معظم انقلاب :</h3>
+                        <p>قدر این سازندگی و هجرت های جهادی را بدانید</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/4.jpg' %}" alt="اردوی جهادی2"
+                         style="width: 750px;height:400px;display: block" class="mx-auto">
+                    <div class="carousel-caption mx-auto rounded"
+                         style="background-color: rgba(88,88,88,0.68);width: 60%">
+                        <h3>رهبر معظم انقلاب :</h3>
+                        <p>قدر این سازندگی و هجرت های جهادی را بدانید</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/5.jpg' %}" alt="اردوی جهادی3"
+                         style="width: 750px;height:400px;display: block" class="mx-auto">
+                    <div class="carousel-caption mx-auto rounded"
+                         style="background-color: rgba(88,88,88,0.68);width: 60%">
+                        <h3>رهبر معظم انقلاب :</h3>
+                        <p>قدر این سازندگی و هجرت های جهادی را بدانید</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/5.jpg' %}" alt="اردوی جهادی3"
+                         style="width: 750px;height:400px;display: block" class="mx-auto">
+                    <div class="carousel-caption mx-auto rounded"
+                         style="background-color: rgba(88,88,88,0.68);width: 60%">
+                        <h3>رهبر معظم انقلاب :</h3>
+                        <p>قدر این سازندگی و هجرت های جهادی را بدانید</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+
         </div>
     </div>
-</header>
 
+{% endblock slider %}
 
 <div id="content">
-<!-- Services -->
-{% block content %}
+    <!-- Farakhan -->
+    {% block content %}
 
 
-    <div>
-        <br><br><br>
-        <h1>مهم ترین هدف اردوی جهادی چیست؟</h1>
-        <br><br>
-        <p>۱۳۹۲-۰۲-۱۶Fardayesabz۱ دیدگاه برای مهم ترین هدف اردوی جهادی چیست؟
-            می‌توان در یک کلمه گفت که مهم‌ترین هدف برگزاری اردوهای جهادی، سازندگی است. اما این عبارت توضیح دارد؛
-            همان‌گونه
-            که خود جهاد توضیح دارد. آغاز این سازندگی، ساختن خود می‌باشد. به عبارتی اولین هدف اردوی جهادی خود سازی است؛
-            همان‌طور که برترین جهاد‌ها جهاد اکبر در معرکه نفس است. این گذر از خود و اجابت حق بزرگ‌ترین و مقدس‌ترین
-            غنیمتی
-            است که از این سفر برای آدمی می‌ماند. در طی این سفر، تذکر و همیاری به یکدیگر در پیمودن پلکان رشد و کمک به
-            سایرین
-            برای ساختن فضای فرهنگی و مذهبی محیط نیز حاصل می‌آید. در کنار این مزایا، رسالتی بر دوش جهادگران است و آن
-            توسعه
-            فرهنگ محرومیت زدایی در بین جوانان و ایجاد روحیه سازندگی و امید در مردم منطقه است. یکی دیگر از اهداف جهادی
-            نیز
-            سازندگی عمرانی، فرهنگی، علمی و بهداشتی در منطقه است. در اردوی جهادی، دانشجویان با وضعیت زندگی یک منطقه محروم
-            کشور در ابعاد مختلف فرهنگی، اعتقادی، معیشتی و بهداشتی و … آشنا شده و از طریق تلاش مخلصانه برای سازندگی در آن
-            منطقه در آن ابعاد، می کوشند که خود را ساخته و رضوان الهی را کسب کنند.
-        </p>
+        <div id="farakhan" class="container shadow mb-1 rounded "
+             style="height:750px;overflow:auto;direction: ltr;background-color:white">
+            <h3 style="padding-right: 20px;padding-top: 50px">فراخوان</h3>
+            <br>
+            <hr style="height: 2px" ; color="green">
+            <div class="container" style="height: 200px;">
+                <div class="row" style="background-color: #eeeeee">
+                    <div class="col-md-2 " style="height: 200px; ">
+                        <div style="height: 80px">
+                            <div class="mx-auto col-md my-3 pt-2" style="width: 150px;height: 40px;
+                        text-align:center;font-family: 'B Yekan';background-color: silver;">98/02/13
+                            </div>
+                        </div>
+                        <div style="height: 80px">
+                            <button onclick="checkLogForHamkari()" type="button"
+                                    style="width: 130px;height: 40px;display: block"
+                                    class="btn btn-success mx-auto col-sm">همکاری
+                            </button>
+                            <button onclick="window.location.href='{% url 'appfront:farakhan_detail' 1 %}'"
+                                    type="button" style="width: 130px;height: 40px;display: block"
+                                    class="btn btn-info mx-auto col-md">ادامه مطلب
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-7" style="margin-top: 30px">
+                        <a href="#"><h4>فراخوان اردوی جهادی در لرستان</h4></a>
+                        <a href="#"><p style="direction: rtl;font-size: 13pt">پایگاه بسیج شهید عزتی بروجورد فراخوان برای
+                            بازسازی مناطق آسیب دیده اعلام کرده است .</p></a>
+                    </div>
 
-        <p>
-            در بین طرح های گرافیکی‌ای که در زمینه ی اردوهای جهادی می توان دید، یکی از طرح های خلاقانه و ابتکاری، طرحی
-            است با
-            موضوع و مفهوم “می سازیم تا ساخته می شویم“. این طرح به خوبی کار چند برگه توضیح را در مورد این حرکت‌های جهادی
-            و
-            اهداف آن خلاصه می‌کند.</p>
-        <p> حضرت علی(ع) می فرمایند: جهاد دری از درهای بهشت است که خداوند آن را برای دوستان خاص خود گشوده است.
-        </p>
-        <p> اردوی جهادی یک عادت شیرین که هر چند و قت یکبار اتفاق می افتد نیست.
-        </p>
-        <p> اردوی جهادی یک سرگرمی تازه که به سرگرمی هایتان اضافه شده باشد، نیست.
-        </p>
-        <p> اردوی جهادی لهو و لعب تازه ای در امتداد پاره ای از بیهودگی های زندگی نیست.
-        </p>
-        <p> ((اردوی جهادی آغاز است ، سرچشمه جاری شدن است))
-        </p>
-        <p> یک ذکر است که مجاهد بودن را در دل یادآوری میکند.
-        </p>
-        <p> تعریف اردوهای جهادی:
-        </p>
-        <p> هر چند که خود لفظ اردوی جهادی چالش برانگیز است و گروههای مختلف، آن را با تعابیر گوناگونی ذکر می کنند؛ مانند
-            سفر
-            جهادی، مسافرت جهادی، حرکت جهادی و … ولی اکثر این تعابیر یک دعوای لفظی است و اطلاق هر یک از این تعابیر نمی
-            تواند
-            موجب تغییر ماهیتی آن شود. آنچه در نفس این مسئله موضوعیت دارد و حتی در اسم آن هم نمود دارد (جهادی) وجه اشتراک
-            همه
-            تعابیر است. بدون در نظر گرفتن این اصل، ماهیت مسئله دستخوش تغییری شگفت می شود. بدین معنا که غفلت از این اصل
-            موجب
-            استحاله ماهیتی می شود و ضربه ای بنیادین به این موضوع وارد میکند. با توجه به این مطلب در اینجا ما تعبیر اردوی
-            جهادی را به کار می بریم . همانطور که توضیح دادیم ، اردوی جهادی در قالب های مختلفی از جوانان تشکیل می شود از
-            جمله
-            اردوی جهادی دانشجویی، اردوی جهادی اقشار، اردوی جهادی پزشکان، اردوی جهادی طلاب و …
+                    <div class="col-md-3" style="">
+                        <a href="#">
+                            <img src="{% static 'img/8.jpg' %}" style="width: 230px;height: 150px;margin-top: 20px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr style="margin: 20px">
+            <div class="container " style="height: 200px;">
+                <div class="row" style="background-color: #eeeeee">
+                    <div class="col-md-2 " style="height: 200px; ">
+                        <div style="height: 80px">
+                            <div class="mx-auto col-md my-3 pt-2" style="width: 150px;
+                        height: 40px;background-color: silver;text-align:center;font-family: 'B Yekan'">98/02/13
+                            </div>
+                        </div>
+                        <div style="height: 80px">
+                            <button onclick="checkLogForHamkari()" type="button"
+                                    style="width: 130px;height: 40px;display: block"
+                                    class="btn btn-success mx-auto col-md">همکاری
+                            </button>
+                            <button onclick="window.location.href='{% url 'appfront:farakhan_detail' 1 %}'"
+                                    type="button" style="width: 130px;height: 40px;display: block"
+                                    class="btn btn-info mx-auto col-md">ادامه مطلب
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-7" style="margin-top: 30px">
+                        <a href="#"><h4>فراخوان اردوی جهادی در آق قلا</h4></a>
+                        <a href="#"><p style="direction: rtl;font-size: 13pt">پایگاه بسیج آق قلا فراخوان برای کمک به
+                            بازسازی مناطق تخریب شده اعلام کرده است .</p></a>
+                    </div>
+                    <div class="col-md-3" style="height: 100">
+                        <a href="#">
+                            <img src="{% static 'img/6.jpg' %}" style="width: 230px;height: 150px;margin-top: 20px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr style="margin: 20px">
+            <div class="container " style="height: 200px;">
+                <div class="row" style="background-color: #eeeeee">
+                    <div class="col-md-2 " style="height: 200px; ">
+                        <div style="height: 80px">
+                            <div class="mx-auto col-md my-3 pt-2" style="width: 150px;
+                            height: 40px;text-align:center;font-family: 'B Yekan';background-color: silver;">98/02/13
+                            </div>
+                        </div>
+                        <div style="height: 80px">
+                            <button onclick="checkLogForHamkari()" type="button"
+                                    style="width: 130px;height: 40px;display: block"
+                                    class="btn btn-success mx-auto col-md">همکاری
+                            </button>
+                            <button onclick="window.location.href='{% url 'appfront:farakhan_detail' 1 %}'"
+                                    type="button" style="width: 130px;height: 40px;display: block"
+                                    class="btn btn-info mx-auto col-md">ادامه مطلب
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-7" style="margin-top: 30px">
+                        <a href="#"><h4>فراخوان اردوی جهادی در هرمزگان</h4></a>
+                        <a href="#"><p style="direction: rtl;font-size: 13pt">پایگاه بسیج شهید احترامی بندرعباس فراخوان
+                            برای کمک به کشاورزان آسیب دیده اعلام کرده است .</p></a>
+                    </div>
+                    <div class="col-md-3" style="eb5b04;height: 100">
+                        <a href="#">
+                            <img src="{% static 'img/7.jpg' %}" style="width: 230px;height: 150px;margin-top: 20px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr style="margin: 20px">
+            <div class="container" style="height: 200px;">
+                <div class="row" style="background-color: #eeeeee">
+                    <div class="col-md-2 " style="height: 200px; ">
+                        <div style="height: 80px">
+                            <div class="mx-auto col-md my-3 pt-2" style="width: 150px;
+                        height: 40px;text-align:center;font-family: 'B Yekan';background-color: silver;">98/02/13
+                            </div>
+                        </div>
+                        <div style="height: 80px">
+                            <button onclick="checkLogForHamkari()" type="button"
+                                    style="width: 130px;height: 40px;display: block"
+                                    class="btn btn-success mx-auto col-md">همکاری
+                            </button>
+                            <button onclick="window.location.href='{% url 'appfront:farakhan_detail' 1 %}'"
+                                    type="button" style="width: 130px;height: 40px;display: block"
+                                    class="btn btn-info mx-auto col-md">ادامه مطلب
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-7" style="margin-top: 30px">
+                        <a href="#"><h4>فراخوان اردوی جهادی در هرمزگان</h4></a>
+                        <a href="#"><p style="direction: rtl;font-size: 13pt">پایگاه بسیج شهید احترامی بندرعباس فراخوان
+                            برای کمک به کشاورزان آسیب دیده اعلام کرده است .</p></a>
+                    </div>
+                    <div class="col-md-3" style="height: 100">
+                        <a href="#">
+                            <img src="{% static 'img/8.jpg' %}" style="width: 230px;height: 150px;margin-top: 20px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        </p>
-        <p> حال اردوی جهادی چیست؟
-        </p>
-        <p> هرچند که اردوی جهادی در عرصه های مختلف (علمی، بهداشت و درمان، عمرانی، فرهنگی، پژوهشی، دامپروری و کشاورزی،
-            خدمت
-            رسانی و مطالبه گری و …) تعاریف متفاوتی دارد ولی در اطلاق اردوی جهادی می توان یک تعریف را حمل کرد. در تعریف
-            اردوی
-            جهادی بهتر است که اول این سوال را بپرسیم که اردوی جهادی چه نیست؟
-        </p>
-        <p> اردوی جهادی یک عادت شیرین که هر چند و قت یکبار اتفاق می افتد نیست.
-        </p>
-        <p> اردوی جهادی یک سرگرمی تازه که به سرگرمی هایتان اضافه شده باشد، نیست.
-        </p>
-        <p> اردوی جهادی لهو و لعب تازه ای در امتداد پاره ای از بیهودگی های زندگی نیست.
-        </p>
-        <p>
-            هر چند که اگر نیت درستی نداشته باشیم و همت نکنیم باید اعتراف کرد که اردوی جهادی پتانسیل کافی برای تبدیل شدن
-            به
-            آن چیزهایی که نیت را دارد.
-        </p>
-        <p> و اما حال باید بپرسیم که اردوی جهادی چیست؟
-        </p>
-        <p> (اردوی جهادی آغاز است، سرچشمه جاری شدن است)
-        </p>
-        <p> یک ذکر است که مجاهد بودن را در دل یادآوری می کند. و به عبارت دیگری اردوی جهادی را باید اینگونه تعریف کرد: یک
-            حرکت دسته جمعی که در آن افراد با توجه به موقعیت کاری یا علمی که درجامعه دارند یک سری برنامه های اصلاحی را،
-            طی یک
-            برنامه غالباً کوتاه مدت و البته بدون انگیزه مالی به اجراء در می آورند.
-        </p>
-        <p> تعریف بستر اردوهای جهادی اینگونه است:
-        </p>
-        <p> اردوهایی است که در آن تعدادی از دانشجویان، دانش آموزان یا طلاب حوزه علمیه در مناطق محروم کشور بصورت
-            داوطلبانه به
-            انجام فعالیت های فرهنگی - آموزش و خدمات - عمرانی می پردازند.
-        </p>
-        <p> دانشنامه جهادی
-        </p>
 
 
-    </div>
-{% endblock content %}
 
+
+        <!-- Form Hamkari-->
+
+        <div id="hamkari" class="container shadow mb-1 rounded " style="height: 600px;margin-top: 90px">
+            <h3 style="padding-top: 50px;padding-right: 20px">همکاری</h3>
+            <br>
+            <hr style="height: 2px" ; color="green">
+            <form action="#">
+                <div style="height: 140px">
+                    <div class="row">
+
+                        <div class="col-md-1">
+                            <img src="flag.png" style="float: right;margin: 20px 20px;width: 60px;height: 60px">
+                        </div>
+                        <div class="col-md-11" style="margin-top: 25px">
+                            <h4 id="hamkari_label" style="margin-top: 10px">برای همکاری جهادی ثبت نام کنید :</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mr-lg-5">
+                    <div class="col-md-6" id="right" style="">
+                        <div class="form-group">
+                            <label for="email">نام :</label>
+                            <input type="email" class="custom-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">کد ملی :</label>
+                            <input type="password" class="custom-control" id="pwd">
+                        </div>
+                        <br><br>
+                        <div class="col-md-8" style="">
+                            <form>
+                                <p> انتخاب نوع همکاری :</p>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <label class="custom-control-label">نقدی</label>
+                                    <input type="checkbox" class="custom-control-input" id="customRadio" name="example"
+                                           value="customEx">
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <label class="custom-control-label">خدماتی</label>
+                                    <input type="checkbox" class="custom-control-input" id="customRadio2" name="example"
+                                           value="customEx">
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <label class="custom-control-label">اهدای اجناس</label>
+                                    <input type="checkbox" class="custom-control-input" id="customRadio2" name="example"
+                                           value="customEx">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" id="right">
+                        <div class="form-group">
+                            <label for="email">نام :</label>
+                            <input type="email" class="custom-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">کد ملی :</label>
+                            <input type="password" class="custom-control" id="pwd">
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-success btn" style="width: 90px">ثبت نام</button>
+                    </div>
+                </div>
+        </div>
+
+
+
+
+
+        <!--Gallery-->
+
+        <div id="faaliat" class="container shadow mb-1 rounded" style="height: 430px;margin-top: 90px">
+            <h3 style="padding-top: 50px ;padding-right: 20px">
+                <a href="gallery.html">
+                    گالری
+                </a>
+            </h3>
+            <br>
+            <hr style="height: 3px;color: yellow">
+            <div class="" style="">
+                <div class="row">
+                    <div class="col-md-3 gal" style="text-align: center">
+                        <a href="#">
+                            <img src="{% static 'img/6.jpg' %}" style="width: 85%;height: 70%;display: block "
+                                 class="mx-auto col-md ">
+                        </a>
+                        <a href="#">
+                            <p style="padding-top: 7px">
+                                ساختن یک مدرسه و یک مسجد در لرستان
+                                <br>
+                                مرداد 98
+                            </p>
+                        </a>
+                    </div>
+                    <div class="col-md-3 gal" style="text-align: center">
+                        <a href="#">
+                            <img src="{% static 'img/7.jpg' %}" style="width: 85%;height: 70%;display: block "
+                                 class="mx-auto col-md ">
+                        </a>
+                        <a href="#">
+                            <p style="padding-top: 7px">
+                                پخش اجناس اهدایی در مناطق سیب زده
+                                <br>
+                                فروردین 98
+                            </p>
+                        </a>
+                    </div>
+                    <div class="col-md-3 gal" style="text-align: center">
+                        <a href="#">
+                            <img src="{% static 'img/8.jpg' %}" style="width: 85%;height: 70%;display: block "
+                                 class="mx-auto col-md ">
+                        </a>
+                        <a href="#">
+                            <p style="padding-top: 7px">
+                                خدمات پزشکی و درمانی رایگان مناطق محروم
+
+                                تیر 97
+                            </p>
+                        </a>
+                    </div>
+                    <div class="col-md-3 gal" style="text-align: center">
+                        <a href="#">
+                            <img src="{% static 'img/9.jpg' %}" style="width: 85%;height: 70%;display: block "
+                                 class="mx-auto col-md ">
+                        </a>
+                        <a href="#">
+                            <p style="padding-top: 7px">
+                                ساختن یک مدرسه و یک مسجد در اهواز
+                                <br>
+                                شهریور 97
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--faaliat-->
+
+
+        <div id="faaliat" class="container shadow mb-1 rounded" style="height: 430px;margin-top: 90px">
+            <h3 style="padding-top: 50px ;padding-right: 20px">فعالیت های ما</h3>
+            <br>
+            <hr style="height: 3px;color: green">
+            <div class="" style="height:200px">
+                <div class="row">
+                    <div class="col-md-3 gallery rounded "
+                         style="text-align: center;border-color: #2e2e2e;height: 170px;padding: 35px;background-color:rgb(238, 238, 238)">
+                        <p style="padding-top: 7px">
+                            گرد هم آوردن گروه های جهادی در راستای کمک به هموطنان محروم و آسیب دیده
+                        </p>
+                    </div>
+                    <div class="col-md-3 gallery rounded"
+                         style="text-align: center;height: 170px;padding: 35px;background-color:rgb(238, 238, 238)">
+                        <p style="padding-top: 7px">
+                            جمع آوری کمک های اجناسی و نقدی برای افراد محروم و یا آسیب دیده
+                        </p>
+                    </div>
+                    <div class="col-md-3 gallery rounded"
+                         style="text-align: center;height: 170px;padding: 35px;background-color:rgb(238, 238, 238)">
+                        <p style="padding-top: 7px">
+                            خریداری وسایل اولیه ضروری برای خانواده های کم بضاعت و محروم
+
+                        </p>
+                    </div>
+                    <div class="col-md-3 gallery rounded"
+                         style="text-align: center;height: 170px;padding: 35px;background-color:rgb(238, 238, 238)">
+                        <p style="padding-top: 7px">
+                            گرد هم آوردن داوطلبان خدمت رسانی رایگان به مناطق آسیب دیده ، فقیر و محروم
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- ABOUT US -->
+        <div class="container shadow mb-1 " style="margin-top: 50px;background-color: rgb(250, 242, 233)">
+
+            <div id="aboutus" class="container " style="height: 460px;font-size: 14pt">
+                <h3 style="padding-top: 40px">درباره گروه</h3>
+                <hr style="height: 3px;color:green">
+                <div class="row">
+                    <div class="container col-md-10 mt-md-3 mr-md-3" id="aboutus" style="text-align: right">
+                        <p>گروه جهادی انصارالزهرا(س) توسط عده ای از جوانان دغدغه مند به منظور زمینه سازی ظهور منجی
+                            عالم بشریت حضرت ولیعصر(ارواحنافداه) و با توجه به تاکیدات
+                            حضرت امام خمینی(ره) و حضرت امام خامنه ای (مدظله العالی) در زمینه ی خدمت رسانی
+                            و کمک به مردم مناطق کمتر برخوردار و محروم کشور در خرداد ۱۳۹۴ تاسیس شده است.
+                            افراد حلقه ی اولیه این گروه جهادی از سال۹۱ تحت عنوان گروه جهادی بسیج دانشجویی دانشگاه خود در
+                            مناطق
+                            کمتر برخوردار شهرستان کوهدشت و چگنی استان لرستان فعالیت کرده اند که در شهریور ماه ۹۲ هم به
+                            عنوان گروه
+                            جهادی نمونه دانشجویی استان تهران معرفی شدند. این افراد بعد از پایان دوران دانشجویی خود از
+                            خرداد سال ۱۳۹۴
+                            گروه جهادی انصارالزهرا(س) را فراتر از فضای دانشگاه و دانشجویی و با حضور دیگر علاقه مندان
+                            حرکت های جهادی،
+                            در مجموعه بسیج سازندگی و ناحیه بسیج جماران تهران تاسیس کردند.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="id01" class="modal" style=" display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 60px;">
+
+
+            <form class="modal-content animate" method="post" class=" auth-content text-center"
+                  action='{% url 'appfront:index' %}'
+                  onsubmit="validate(event)" style=" background-color: #fefefe;
+            margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 35%;
+            height:75%; /* Could be more or less, depending on screen size */">
+                {% csrf_token %}
+
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                          title="Close Modal">&times;</span>
+                </div>
+                <div class="container" style="padding: 16px;margin-top: 40px">
+                    <label for="username"><b>نام کاربری</b></label>
+                    <input type="text" placeholder="نام کاربری خود را وارد نمایید"
+                           name="username" id="inputUserName" required style="width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;">
+
+                    <label for="password"><b>رمز عبور</b></label>
+                    <input type="password" placeholder="رمز عبور خود را وارد نمایید" name="password" id="inputPassword"
+                           required
+                           style="width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;">
+
+                    <button type="submit"
+                            style=
+                                    "background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;">ورود
+                    </button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> مرا به خاطر بسپار
+                    </label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+            <span class="psw" style="float: right;">
+                <a href="#" style="color: blue;margin-right: 10px">رمز عبور را فراموش کرده ام</a></span>
+                    <p style="float: left;margin-left: 10px">
+                        <a href="cooperation.html">
+                            ثبت نام
+                        </a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+
+        <!--End Of Modal-->
+
+
+    {% endblock content %}
 </div>
+
+
 <!-- Footer -->
-<footer class="footer">
+<footer id="footer" class="footer container  shadow mb-1"
+        style="background-color: #bbbbbb;height: 100px;margin-top: 50px">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-4">
-                <span class="copyright">Copyright &copy; Your Website 2019</span>
+            <div class="col-md-6">
+                <span style="text-align: center;font-family: 'B Yekan'" class="copyright">آدرس : خیابان بهارستان ، خیابان دانشسرا ، کلینیک دندانپزشکی هلال احمر</span>
             </div>
-            <div class="col-md-4">
-                <ul class="list-inline social-buttons">
-                    <li class="list-inline-item">
-                        <a href="#">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <ul class="list-inline quicklinks">
-                    <li class="list-inline-item">
-                        <a href="#">Privacy Policy</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">Terms of Use</a>
-                    </li>
-                </ul>
-            </div>
+
+
         </div>
+
     </div>
 </footer>
-
-<!-- Portfolio Modals -->
-
-<!-- Modal 1 -->
-<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl"></div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2 class="text-uppercase">Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
-                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
-                                repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
-                                nostrum, reiciendis facere nemo!</p>
-                            <ul class="list-inline">
-                                <li>Date: January 2017</li>
-                                <li>Client: Threads</li>
-                                <li>Category: Illustration</li>
-                            </ul>
-                            <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                <i class="fas fa-times"></i>
-                                Close Project
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal 2 -->
-<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl"></div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2 class="text-uppercase">Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
-                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
-                                repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
-                                nostrum, reiciendis facere nemo!</p>
-                            <ul class="list-inline">
-                                <li>Date: January 2017</li>
-                                <li>Client: Explore</li>
-                                <li>Category: Graphic Design</li>
-                            </ul>
-                            <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                <i class="fas fa-times"></i>
-                                Close Project
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal 3 -->
-<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl"></div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2 class="text-uppercase">Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
-                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
-                                repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
-                                nostrum, reiciendis facere nemo!</p>
-                            <ul class="list-inline">
-                                <li>Date: January 2017</li>
-                                <li>Client: Finish</li>
-                                <li>Category: Identity</li>
-                            </ul>
-                            <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                <i class="fas fa-times"></i>
-                                Close Project
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal 4 -->
-<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl"></div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2 class="text-uppercase">Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
-                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
-                                repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
-                                nostrum, reiciendis facere nemo!</p>
-                            <ul class="list-inline">
-                                <li>Date: January 2017</li>
-                                <li>Client: Lines</li>
-                                <li>Category: Branding</li>
-                            </ul>
-                            <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                <i class="fas fa-times"></i>
-                                Close Project
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal 5 -->
-<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl"></div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2 class="text-uppercase">Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
-                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
-                                repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
-                                nostrum, reiciendis facere nemo!</p>
-                            <ul class="list-inline">
-                                <li>Date: January 2017</li>
-                                <li>Client: Southwest</li>
-                                <li>Category: Website Design</li>
-                            </ul>
-                            <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                <i class="fas fa-times"></i>
-                                Close Project
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal 6 -->
-<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl"></div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2 class="text-uppercase">Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
-                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
-                                repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
-                                nostrum, reiciendis facere nemo!</p>
-                            <ul class="list-inline">
-                                <li>Date: January 2017</li>
-                                <li>Client: Window</li>
-                                <li>Category: Photography</li>
-                            </ul>
-                            <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                <i class="fas fa-times"></i>
-                                Close Project
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Bootstrap core JavaScript -->
 <script src="{% static 'js/jquery.min.js' %}"></script>
@@ -455,6 +633,51 @@
 <!-- Custom scripts for this template -->
 <script src="{% static 'js/agency.min.js' %}"></script>
 <script src="{% static 'js/a076d05399.js' %}"></script>
+<script>
+    {#t = '<div class="container" style="height: 200px;background-color:#533f03">\n' +#}
+    {#    '                <div class="row">\n' +#}
+    {#    '                    <div class="col-md-2 " style="height: 200px;background-color: aquamarine ">\n' +#}
+    {#    '                        <div style="background-color: #f1b0b7;height: 80px">\n' +#}
+    {#    '                            <div class="mx-auto col-md my-3 pt-2"\n' +#}
+    {#    '                                 style="width: 150px;height: 40px;background-color: silver;text-align:center">98/02/13\n' +#}
+    {#    '                            </div>\n' +#}
+    {#    '                        </div>\n' +#}
+    {#    '                        <div style="background-color: #a6e22e;height: 80px">\n' +#}
+    {#    '                            <button type="button" style="width: 130px;height: 40px;display: block"\n' +#}
+    {#    '                                    class="btn btn-success mx-auto col-md">همکاری\n' +#}
+    {#    '                            </button>\n' +#}
+    {#    '                            <button type="button" style="width: 130px;height: 40px;display: block"\n' +#}
+    {#    '                                    class="btn btn-info mx-auto col-md">ادامه مطلب\n' +#}
+    {#    '                            </button>\n' +#}
+    {#    '                        </div>\n' +#}
+    {#    '                    </div>\n' +#}
+    {#    '                    <div class="col-md-7" style="background-color: green;margin-top: 30px">\n' +#}
+    {#    '                        <a href="#"><h3>فراخوان اردوی جهادی در هرمزگان</h3></a>\n' +#}
+    {#    '                        <a href="#"><p style="direction: rtl">پایگاه بسیج شهید احترامی بندرعباس فراخوان برای کمک به\n' +#}
+    {#    '                            کشاورزان آسیب دیده اعلام کرده است .</p></a>\n' +#}
+    {#    '                    </div>\n' +#}
+    {#    '                    <div class="col-md-3" style="background-color: yellow;height: 100">\n' +#}
+    {#    '                        <a href="#">\n' +#}
+    {#    '                            <img src="{% static \'img/6.jpg\' %}" style="width: 230px;height: 150px;margin-top: 20px">\n' +#}
+    {#    '                        </a>\n' +#}
+    {#    '                    </div>\n' +#}
+    {#    '                </div>\n' +#}
+    {#    '            </div>'#}
+
+
+</script>
+<script>
+    {% if user.is_authenticated %}
+        var isLoggedIn = true;
+    {% else %}
+        var isLoggedIn = false;
+    {% endif %}
+    var x = 1;
+
+
+</script>
+<script src="{% static 'js/js1.js' %}"></script>
+<script type="text/javascript" src='{% static 'js/forms/form-data-login_modal.js' %}'></script>
 
 {% block extrajs %}{% endblock extrajs %}
 

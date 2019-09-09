@@ -1,0 +1,173 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block extracss %}
+    <!-- select css -->
+
+    {#    <link rel="stylesheet" href='{% static 'datepicker2/css/persianDatepicker-default.css' %}'/><!-- datepicker -->#}
+
+    {#    <link rel="stylesheet" href="{% static 'assets_admin_panel/css/bootstrap.min.css' %}"/>#}
+    {#    <link rel="stylesheet" href="{% static '/assets_admin_panel/css/bootstrap-datepicker.min.css' %}"/>#}
+
+
+    <style>
+        #coachpg {
+            background: #24e5be;
+        }
+
+    </style>
+{% endblock %}
+
+{% block slider %}
+{% endblock slider %}
+
+{% block content %}
+    <!-- فراخوان  -->
+    <div class="container mt-4 shadow" style="height: 370px">
+        <div class="row">
+            <div class="col-12 mt-4" style="height: 60px">
+                <h3>
+                    فراخوان اردوی جهادی دانشگاه علوم پزشکی بابل
+                </h3>
+            </div>
+            <div class="col-8" style="height: 120px">
+                <p>
+                    به گزارش روابط عمومی و امور بین الملل دانشگاه علوم پزشکی بابل
+                    بسیج با همکاری کانون جهادی دانشگاه ، اردوی جهادی بهداشتی - درمانی ،
+                    عمرانی ، فرهنگی ، تربیتی برگزار میکند .
+                    گفتنی است اردوی جهادی در منطقه بندپی شرقی بابل برگزار میگردد
+                    و زمان برگزاری اردو 27 مرداد لغایت 3 شهریور
+                    می باشد .
+                </p>
+            </div>
+            <div class="col-3 mr-lg-5" style="height: 120px">
+                <img src="{% static 'img/1.jpg' %}" style="width: 240px;height: 160px">
+            </div>
+            <div class="col-4" style="background-color: #e8ebe8;height: 60px">
+
+                <p>
+                    <label>مکان :</label>
+                    منطقه بندپی شهرستان بابل
+                </p>
+            </div>
+            <div class="col-4" style="background-color:#e8ebe8;height: 60px">
+
+                <p>
+                    <label>زمان :</label>
+                    27 مرداد الی 3 شهریور
+                </p>
+            </div>
+            <div class="col-8" style="background-color: #e8ebe8;height: 60px">
+
+                <p>
+                    <label>همکاری های مورد نیاز :</label>
+                    خدمات بهداشتی - خدمات پزشکی - خدمات آموزشی
+                </p>
+            </div>
+
+            <div class="col-8" style="">
+                <button class="btn btn-success" onclick="checkLogForHamkari()">همکاری</button>
+                <div style="background-color: silver;width: 150px;height: 35px;float: left;margin-right: 10px">
+                    <p style="text-align: center">98/05/15</p>
+                </div>
+            </div>
+            <div class="col-4">
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="id01" class="modal" style=" display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 60px;">
+
+
+        <form class="modal-content animate" method="post" class=" auth-content text-center"
+              action='{% url 'appfront:index' %}'
+              onsubmit="validate(event)" style=" background-color: #fefefe;
+            margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 35%;
+            height:75%; /* Could be more or less, depending on screen size */">
+            {% csrf_token %}
+
+            <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                          title="Close Modal">&times;</span>
+            </div>
+            <div class="container" style="padding: 16px;margin-top: 40px">
+                <label for="username"><b>نام کاربری</b></label>
+                <input type="text" placeholder="نام کاربری خود را وارد نمایید"
+                       name="username" id="inputUserName" required style="width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;">
+
+                <label for="password"><b>رمز عبور</b></label>
+                <input type="password" placeholder="رمز عبور خود را وارد نمایید" name="password" id="inputPassword"
+                       required
+                       style="width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;">
+
+                <button type="submit"
+                        style=
+                                "background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;">ورود
+                </button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> مرا به خاطر بسپار
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+            <span class="psw" style="float: right;">
+                <a href="#" style="color: blue;margin-right: 10px">رمز عبور را فراموش کرده ام</a></span>
+                <p style="float: left;margin-left: 10px">
+                    <a href="cooperation.html">
+                        ثبت نام
+                    </a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+
+    <!--End Of Modal-->
+{% endblock %}
+
+{% block extrajs %}
+    <script>
+        {% if user.is_authenticated %}
+            var isLoggedIn = true;
+        {% else %}
+            var isLoggedIn = false;
+        {% endif %}
+        var x = 1;
+
+
+    </script>
+    <script src="{% static 'js/js1.js' %}"></script>
+    <script type="text/javascript" src='{% static 'js/forms/form-data-login_modal.js' %}'></script>
+
+    <!-- selects js -->
+{% endblock %}

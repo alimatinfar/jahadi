@@ -1,7 +1,8 @@
 from rest_framework import serializers, exceptions
-from app1.models import Profile, Hamkari, Farakhan, Profile_present, Profile_ready
+from app1.models import Profile, Hamkari, Farakhan, Profile_present, Profile_ready, Hamkari_code
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
+from django.contrib.auth.hashers import make_password
 
 
 class LoginSerilizer(serializers.Serializer):
@@ -63,6 +64,8 @@ class Userserializer(serializers.ModelSerializer):
         model = User
         fields = "__all__"
 
+    validate_password = make_password#حل مشکل نشناختن الگوریتم رمز عبور !!!!!!!!!!!!!!
+
 
 class Farakhanserializer(serializers.ModelSerializer):
     class Meta:
@@ -79,4 +82,10 @@ class Profile_readyserializer(serializers.ModelSerializer):
 class Profile_presentserializer(serializers.ModelSerializer):
     class Meta:
         model = Profile_present
+        fields = "__all__"
+
+
+class Hamkari_codeserializer(serializers.ModelSerializer):
+    class Meta:
+        model = Hamkari_code
         fields = "__all__"

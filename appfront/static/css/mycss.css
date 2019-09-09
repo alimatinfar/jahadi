@@ -1,12 +1,41 @@
 #mainNav .navbar-nav .nav-item .nav-link {
     font-size: 100%;
-    font-weight: 600;
     color: white;
+    z-index: unset;
 }
 
 
 #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: #fed136;
+
+}
+#mainNav{height: 60px;
+}
+
+.carousel-caption{
+    z-index: unset;
+}
+
+#hamkari_label{
+    font-family: "B Yekan";
+    font-size: 26;
+}
+p,label,h3,h4{
+    font-family:"B Yekan";
+}
+a{
+    color: #000000;
+}
+a#navbarResponsive{
+    font-family: "B Yekan";
+    font-size: 14pt;
+}
+a:hover{
+    color: #1b1e21;
+    text-decoration: none;
+}
+.btn{
+    font-family:"B Yekan";
 }
 
 body {
@@ -33,4 +62,64 @@ body {
 
 #content{
     margin: 100px;
+}
+
+#header{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+#right-nav{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+
+<!-- modal -->
+button:hover {
+    opacity: 0.8;
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
 }
