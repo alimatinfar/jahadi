@@ -149,9 +149,9 @@
                 </div>
                 <div class="col-md-2" style="background-color: white">
                     <div class="form-group">
-                        <button class="btn btn-warning">
+                        <a class="btn btn-warning" href="{% url 'appfront:edit_profile' id=id_user %}">
                             ویرایش
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-3" style="background-color: white">
@@ -220,53 +220,7 @@
             <h3>برنامه های من</h3>
             <br>
             <hr>
-            <div class="row" style="background-color: #white;height: 50px;margin-right: 50px">
-                <div class="col-md-2 mt-3">
-                    <h6>-1</h6>
-                </div>
-                <div class="col-md-7 mt-2">
-                    <p> خدمات پزشکی در اردوی جهادی گلستان</p>
-                </div>
-                <div class="col-md-3 mt-2">
-                    <p> 98/03/25</p>
-                </div>
-            </div>
-            <hr>
-            <div class="row" style="background-color: #white;height:50px;margin-right: 50px">
-                <div class="col-md-2 mt-3">
-                    <h6>-2</h6>
-                </div>
-                <div class="col-md-7 mt-2">
-                    <p> خدمات پزشکی در اردوی جهادی لرستان</p>
-                </div>
-                <div class="col-md-3 mt-2">
-                    <p> 98/01/05</p>
-                </div>
-            </div>
-            <hr>
-            <div class="row" style="background-color: #white;height: 50px;margin-right: 50px">
-                <div class="col-md-2 mt-3">
-                    <h6>-3</h6>
-                </div>
-                <div class="col-md-7 mt-2">
-                    <p> خدمات پزشکی در اردوی جهادی لرستان</p>
-                </div>
-                <div class="col-md-3 mt-2">
-                    <p> 98/01/05</p>
-                </div>
-            </div>
-            <hr>
-            <div class="row" style="background-color: #white;height: 50px;margin-right: 50px">
-                <div class="col-md-2 mt-3">
-                    <h6>-4</h6>
-                </div>
-                <div class="col-md-7 mt-2">
-                    <p> خدمات پزشکی در اردوی جهادی لرستان</p>
-                </div>
-                <div class="col-md-3 mt-2">
-                    <p> 98/01/05</p>
-                </div>
-            </div>
+
         </div>
     </div>
 {% endblock %}
@@ -278,22 +232,21 @@
 
     <script type="text/javascript" src='{% static 'js/forms/form-data-login.js' %}'></script>
     <script>
-        farakhan_title = {{ farakhan_hamkari_title|safe }}
-            farakhan_date_f = {{ farakhan_hamkari_date_f|safe }}
-                farakhan_place = {{ farakhan_hamkari_place|safe }}
-                    console.log(farakhan_date_f)
-        for (i = 0; i < farakhan_title.length; i++) {
-            $("#farakhan").append("            <div class=\"row\" style=\"background-color: #ba8b00;height: 50px;margin-right: 50px\">\n" +
+        farakhan_ready_title = {{ farakhan_ready_title|safe }}
+        farakhan_ready_date_f = {{ farakhan_ready_date_f|safe }}
+        for (i = 0; i < farakhan_ready_title.length; i++) {
+            $("#myplans").append("            <div class=\"row\" style=\"background-color: #white;height:50px;margin-right: 50px\">\n" +
                 "                <div class=\"col-md-2 mt-3\">\n" +
-                "                    <h6>" + -(i + 1) + "</h6>\n" +
+                "                    <h6>-"+ (i+1) +"</h6>\n" +
                 "                </div>\n" +
                 "                <div class=\"col-md-7 mt-2\">\n" +
-                "                    <p>" + farakhan_title[i] + " در اردوی جهادی " + farakhan_place[i] + "</p>\n" +
+                "                    <p>"+ farakhan_ready_title[i] +"</p>\n" +
                 "                </div>\n" +
                 "                <div class=\"col-md-3 mt-2\">\n" +
-                "                    <p>" + farakhan_date_f[i] + "</p>\n" +
+                "                    <p>"+ farakhan_ready_date_f[i] +"</p>\n" +
                 "                </div>\n" +
-                "            </div>");
+                "            </div>\n" +
+                "            <hr>");
         }
 
     </script>

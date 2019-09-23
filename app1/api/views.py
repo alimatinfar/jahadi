@@ -21,6 +21,7 @@ from django.utils.decorators import method_decorator
 from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
 from rest_framework import exceptions, status
+from django.shortcuts import get_object_or_404
 
 @method_decorator(csrf_exempt, name='dispatch')
 class Login222(generics.GenericAPIView):
@@ -35,6 +36,16 @@ class Login222(generics.GenericAPIView):
 
         return Response({"token": token.key, "userid": user.id, "user": Userserializer(user, many=False).data},
                         status=200)
+
+
+class ProfileCreateAPIView(generics.GenericAPIView):
+    def post(self, request):
+        serializer = ProfileSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class ProfileListCreateAPIView(generics.ListCreateAPIView):
@@ -94,7 +105,41 @@ class UserCreateAPIView(generics.GenericAPIView):
             raise exceptions.ValidationError("password is required")
         user.is_active = True
         user.save()
-        return Response({'username':user.username, 'password': user.password, 'id': user.id},status=status.HTTP_201_CREATED)
+        return Response({'username': user.username, 'password': user.password, 'id': user.id},
+                        status=status.HTTP_201_CREATED)
+
+
+class UserEditAPIView(generics.GenericAPIView):
+
+    def put(self, request, id=None):
+        if id:
+            user = get_object_or_404(User, id=id)
+            active = user.is_active
+            staff = user.is_staff
+            superuser = user.is_superuser
+            print(user.is_superuser)
+            serialize = Userserializer(user, data=request.data)
+            if serialize.is_valid():
+                try:
+                    user.username = request.data.get("username")
+                except:
+                    raise exceptions.ValidationError("username is required")
+
+                try:
+                    user.set_password(request.data.get("password"))
+                except:
+                    raise exceptions.ValidationError("password is required")
+
+                user.is_active = active
+                user.is_staff = staff
+                user.is_superuser = superuser
+                user.save()
+                return Response(serialize.data, status=status.HTTP_200_OK)
+            else:
+                return Response(serialize.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        else:
+            raise exceptions.ValidationError("id is null")
 
 
 class UserListCreateAPIView(generics.ListCreateAPIView):

@@ -64,7 +64,7 @@ function getprofile(value) {
 function loadDoc() {
 
 
-    var hamkari_title = inputHamkariTitle.value;
+    var farakhan_title = inputHamkariTitle.value;
     var hamkari_type = select_hamkari.value;
     var date_first = inputDatefirst.value;
     var date_end = inputDateEnd.value;
@@ -74,7 +74,7 @@ function loadDoc() {
     form.append("date_first", date_first);
     form.append("date_end", date_end);
     form.append("place", place);
-    form.append("hamkari_title", hamkari_title);
+    form.append("farakhan_title", farakhan_title);
     form.append("hamkari_type", hamkari_type);
 
 

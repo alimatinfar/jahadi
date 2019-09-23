@@ -22,21 +22,16 @@
 
 {% block content %}
     <!-- فراخوان  -->
-    <div class="container mt-4 shadow" style="height: 370px">
+    <div class="container mt-4 shadow" style="min-height: 370px">
         <div class="row">
             <div class="col-12 mt-4" style="height: 60px">
                 <h3>
-                    فراخوان اردوی جهادی دانشگاه علوم پزشکی بابل
+                    {{ farakhan_title }}
                 </h3>
             </div>
             <div class="col-8" style="height: 120px">
                 <p>
-                    به گزارش روابط عمومی و امور بین الملل دانشگاه علوم پزشکی بابل
-                    بسیج با همکاری کانون جهادی دانشگاه ، اردوی جهادی بهداشتی - درمانی ،
-                    عمرانی ، فرهنگی ، تربیتی برگزار میکند .
-                    گفتنی است اردوی جهادی در منطقه بندپی شرقی بابل برگزار میگردد
-                    و زمان برگزاری اردو 27 مرداد لغایت 3 شهریور
-                    می باشد .
+                    {{ farakhan_content }}
                 </p>
             </div>
             <div class="col-3 mr-lg-5" style="height: 120px">
@@ -46,36 +41,32 @@
 
                 <p>
                     <label>مکان :</label>
-                    منطقه بندپی شهرستان بابل
+                    {{ farakhan_place }}
                 </p>
             </div>
             <div class="col-4" style="background-color:#e8ebe8;height: 60px">
 
                 <p>
                     <label>زمان :</label>
-                    27 مرداد الی 3 شهریور
+                    {{ farakhan_date_f }} الی {{ farakhan_date_e }}
                 </p>
             </div>
             <div class="col-8" style="background-color: #e8ebe8;height: 60px">
 
                 <p>
                     <label>همکاری های مورد نیاز :</label>
-                    خدمات بهداشتی - خدمات پزشکی - خدمات آموزشی
+                    {{ farakhan_type }}
                 </p>
             </div>
+            <br>
+            <br>
 
-            <div class="col-8" style="">
-                <button class="btn btn-success" onclick="checkLogForHamkari()">همکاری</button>
-                <div style="background-color: silver;width: 150px;height: 35px;float: left;margin-right: 10px">
-                    <p style="text-align: center">98/05/15</p>
+                <div class="col-8" style="margin: 30px; direction: rtl">
+                    <button class="btn btn-success" onclick="checkLogForHamkari()">همکاری در این فراخوان</button>
                 </div>
-            </div>
-            <div class="col-4">
 
-            </div>
         </div>
     </div>
-
 
 
     <div id="id01" class="modal" style=" display: none; /* Hidden by default */
@@ -92,7 +83,7 @@
 
 
         <form class="modal-content animate" method="post" class=" auth-content text-center"
-              action='{% url 'appfront:index' %}'
+              action='{% url 'appfront:farakhan_detail' id_farakhan %}'
               onsubmit="validate(event)" style=" background-color: #fefefe;
             margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
             border: 1px solid #888;
@@ -157,6 +148,11 @@
 
 {% block extrajs %}
     <script>
+
+        id_profile = {{ id_profile }}
+            id_farakhan = {{ id_farakhan }}
+                console.log(typeof (id_farakhan))
+        console.log(typeof (id_profile))
         {% if user.is_authenticated %}
             var isLoggedIn = true;
         {% else %}
