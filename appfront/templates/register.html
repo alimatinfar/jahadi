@@ -133,13 +133,13 @@
                                name="picture" required>
                     </div>
                 </div>
-
-                <div class="col-md-5 ce" style="text-align: left" id="inputGroupFile">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile">
-                        <label class="custom-file-label custom-file-control" for="customFile">Choose file</label>
-                    </div>
-                </div>
+{##}
+{#                <div class="col-md-5 ce" style="text-align: left" id="inputGroupFile">#}
+{#                    <div class="custom-file">#}
+{#                        <input type="file" class="custom-file-input" id="customFile">#}
+{#                        <label class="custom-file-label custom-file-control" for="customFile">Choose file</label>#}
+{#                    </div>#}
+{#                </div>#}
 
                 <div class="col-md-5 ce" style="">
                     <div class="form-group">
@@ -193,6 +193,9 @@
             var fileName = $(this).val();
             $(this).next('.form-control-file').addClass("selected").html(fileName);
         })
+
+        username_list = {{ username_list|safe }}
+        console.log(username_list)
     </script>
 
     <script type="text/javascript" src='{% static 'js/forms/form-data-register.js' %}'></script>

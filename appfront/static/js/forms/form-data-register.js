@@ -100,7 +100,7 @@ function loadDoc() {
         form2.append("marital", marital);
         form2.append("address", address);
         form2.append("mobile", mobile);
-        // form2.append("picture", '/media/IMG_%DB%B2%DB%B0%DB%B1%DB%B9%DB%B0%DB%B1%DB%B1%DB%B4_%DB%B1%DB%B6%DB%B5%DB%B7%DB%B0%DB%B0_P1BHhO2.jpg');
+        form2.append("picture", picture);
         form2.append("father_name", father_name);
         form2.append("email", email);
 
@@ -142,7 +142,12 @@ $(document).ready(function () {
 
     $("form").submit(function (e) {
         e.preventDefault();//برای اینکه صفحه بعد از سابمیت رفرش نشود!!!!!
-        loadDoc();
+        var u = inputUsername.value;
+        if (username_list.includes(u)) {
+            alert('این نام کاربری قبلا ثبت شده است !!!!!!!!!!!!!!!!!!')
+        } else {
+            loadDoc();
+        }
     });
 
 });

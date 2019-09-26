@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout, authenticate, login
-from app1.models import Hamkari, Farakhan, Profile_ready
+from app1.models import Hamkari, Farakhan, Profile_ready, User
 from datetime import date
+from kavenegar import *
 
 
 # Create your views here.
@@ -37,7 +38,24 @@ def folder_gallery(request):
 
 
 def register(request):
-    return render(request, 'register.html')
+    if request.method == 'POST':
+        receptor = request.POST.get('mobile')
+        print(receptor)
+        api = KavenegarAPI('5A31706B38614D7352536A6F2B3173493959753258636E4A7363347777396B7672416F33657076426B4E6F3D')
+        params = {'sender': '1000596446', 'receptor': receptor, 'message': 'سلام جواد جون!!!!!!!!!!!!!!!!!!!'}
+        response = api.sms_send(params)
+        print(response)
+
+    users = User.objects.all()
+    username_list = []
+    for i in users:
+        username_list.append(i.username)
+
+    context = {
+        'username_list' : username_list,
+    }
+
+    return render(request, 'register.html', context= context)
 
 
 def cooperation(request):
