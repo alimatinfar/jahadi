@@ -40,11 +40,13 @@ def folder_gallery(request):
 def register(request):
     if request.method == 'POST':
         receptor = request.POST.get('mobile')
+        print('vared sms shod')
         print(receptor)
         api = KavenegarAPI('5A31706B38614D7352536A6F2B3173493959753258636E4A7363347777396B7672416F33657076426B4E6F3D')
         params = {'sender': '1000596446', 'receptor': receptor, 'message': 'سلام جواد جون!!!!!!!!!!!!!!!!!!!'}
         response = api.sms_send(params)
         print(response)
+        return redirect('appfront:index')
 
     users = User.objects.all()
     username_list = []

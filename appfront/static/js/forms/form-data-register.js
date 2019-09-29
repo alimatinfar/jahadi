@@ -100,7 +100,7 @@ function loadDoc() {
         form2.append("marital", marital);
         form2.append("address", address);
         form2.append("mobile", mobile);
-        form2.append("picture", picture);
+        // form2.append("picture", picture);
         form2.append("father_name", father_name);
         form2.append("email", email);
 

@@ -37,13 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app1',
+    'appfront',
     'rest_framework',
     'rest_framework.authtoken',
     'django_filters',
-    'appfront',
     'ckeditor',
     'ckeditor_uploader',
-
 ]
 
 MIDDLEWARE = [
