@@ -1,0 +1,106 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block extrahead %}
+{% endblock %}
+{% block extracss %}
+
+    <style>
+        div.gallery {
+            margin: 5px 20px 5px 20px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 180px;
+        }
+
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+
+{% block slider %}
+{% endblock slider %}
+
+{% block content %}
+
+    <div class="container" style="background-color: #f2f2f2">
+        <div class="row" style="margin-top: 30px">
+
+
+            <div class="gallery">
+                <a target="_blank" href="/media/download.jfif">
+                    <img src="/media/download.jfif" alt="1" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+
+
+            <div class="gallery">
+                <a target="_blank" href="">
+                    <img src="/media/download.jfif" alt="1" width="600" height="400">
+                </a>
+                <div class="desc">لرستان - مرداد 97</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="{% url 'appfront:gallery' 1 %}">
+                    <img src="{% static 'img/folder.jpg' %}" alt="2" width="600" height="400">
+                </a>
+                <div class="desc">آق قلا - فروردین 98</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="{% url 'appfront:gallery' 1 %}">
+                    <img src="{% static 'img/folder.jpg' %}" alt="3 " width="600" height="400">
+                </a>
+                <div class="desc">اهواز - تابستان 97</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="{% url 'appfront:gallery' 1 %}">
+                    <img src="{% static 'img/folder.jpg' %}" alt="4" width="600" height="400">
+                </a>
+                <div class="desc">زابل - زمستان 97</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="{% url 'appfront:gallery' 1 %}">
+                    <img src="{% static 'img/folder.jpg' %}" alt="5" width="600" height="400">
+                </a>
+                <div class="desc">بیرجند - زمستان 96</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="{% url 'appfront:gallery' 1 %}">
+                    <img src="{% static 'img/folder.jpg' %}" alt="5" width="600" height="400">
+                </a>
+                <div class="desc">بیرجند - زمستان 96</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="{% url 'appfront:gallery' 1 %}">
+                    <img src="{% static 'img/folder.jpg' %}" alt="5" width="600" height="400">
+                </a>
+                <div class="desc">بیرجند - زمستان 96</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="{% url 'appfront:gallery' 1 %}">
+                    <img src="{% static 'img/folder.jpg' %}" alt="5" width="600" height="400">
+                </a>
+                <div class="desc">بیرجند - زمستان 96</div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+{% endblock %}

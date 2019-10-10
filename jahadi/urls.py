@@ -19,7 +19,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    url(r'admin/', admin.site.urls),
+    url(r'adminjahadi/', admin.site.urls),
     url(r'^api/', include('app1.api.urls')),
     url(r'^', include('appfront.urls')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),

@@ -20,7 +20,7 @@
 {% endblock slider %}
 
 {% block content %}
-    <div class="col-md-12 mt-lg-5" style="border: 2px">
+    <div class="col-md-12 mt-lg-5" style="background-color:white;border: 2px;padding: 30px">
         <form id="validation-form123" action="">
             <div class="row mr-lg-5">
 
@@ -88,6 +88,19 @@
                 </div>
 
 
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>مبلغ :</label>
+                        <input type="text" class="form-control" placeholder="ریال" name="text1">
+                    </div>
+                </div>
+
+                <div class="col-md-10">
+                    <br><br>
+                    <hr>
+                </div>
+
+
                 <div class="col-md-12">
                     <div class="form-group">
                         <h5 class="mt-5">اجناس اهدایی</h5>
@@ -149,6 +162,20 @@
                     </div>
                 </div>
 
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <div class="form-check-inline">
+                                <input type="checkbox" class="custom-control-input" id="inputmasaleh">
+                                <label class="custom-control-label" for="inputmasaleh">
+                                    سایر
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-md-6">
                     <div class="form-group">
                         <div class="custom-control custom-checkbox">
@@ -160,6 +187,19 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label>شرح اجناس :</label>
+                        <textarea type="textarea" class="form-control" placeholder="ریال" name="text1" rows="5">
+                        </textarea>
+                    </div>
+                </div>
+
+                <div class="col-md-10">
+                    <br><br>
+                    <hr>
                 </div>
 
 
@@ -226,24 +266,43 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+
+                <div class="col-md-5">
                     <div class="form-group">
-                        <div class="custom-control custom-checkbox">
-                            <div class="form-check-inline mr-3">
-                            </div>
-                        </div>
+                        <label>شرح خدمات :</label>
+                        <textarea type="textarea" class="form-control" placeholder="ریال" name="text1" rows="5">
+                        </textarea>
                     </div>
                 </div>
 
-                <div class="col-md-6">
-                    <br>
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-10">
+                    <br><br>
+                    <hr>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 mt-lg-5">
                     <div class="form-group row">
                         <button id="createProfileFormSubmit" type="submit"
                                 class="btn btn-success btn-lg mr-lg-5"
-                                style="width: 200px;height: 60px;font-size: 19pt">ثبت نام
+                                style="width: 200px;height: 60px;font-size: 19pt">ادامه
                         </button>
                     </div>
                 </div>
+
             </div>
         </form>
     </div>

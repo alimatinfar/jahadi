@@ -12,6 +12,10 @@ from rest_framework.permissions import (
 from rest_framework.filters import SearchFilter, OrderingFilter
 
 from .permissions import OwnerCanManageReadOnly
+
+
+import json
+from django.core import serializers
 from app1.models import Profile, Hamkari, User, Farakhan, Profile_present, Profile_ready, Hamkari_code
 from rest_framework.authentication import TokenAuthentication
 from .serializers import ProfileSerializer, HamkariSerializer, Hamkari_codeserializer, LoginSerilizer, Userserializer, \
@@ -105,8 +109,87 @@ class UserCreateAPIView(generics.GenericAPIView):
             raise exceptions.ValidationError("password is required")
         user.is_active = True
         user.save()
-        return Response({'username': user.username, 'password': user.password, 'id': user.id},
-                        status=status.HTTP_201_CREATED)
+
+        #
+        # user_serialized = serializers.serialize('json', user)
+        # user_json = json.loads(user_serialized)
+        # user_json = user_json[0]
+
+        try:
+            email = request.data.get("email")
+        except:
+            raise exceptions.ValidationError("email is required")
+
+        try:
+            first_name = request.data.get("first_name")
+        except:
+            raise exceptions.ValidationError("first_name is required")
+
+        try:
+            last_name = request.data.get("last_name")
+        except:
+            raise exceptions.ValidationError("last_name is required")
+
+
+        try:
+            national_code = request.data.get("national_code")
+        except:
+            raise exceptions.ValidationError("national_code is required")
+
+        try:
+            date_birth = request.data.get("date_birth")
+        except:
+            raise exceptions.ValidationError("date_birth is required")
+
+        try:
+            gender = request.data.get("gender")
+        except:
+            raise exceptions.ValidationError("gender is required")
+
+        try:
+            marital = request.data.get("marital")
+        except:
+            raise exceptions.ValidationError("marital is required")
+
+        try:
+            address = request.data.get("address")
+        except:
+            raise exceptions.ValidationError("address is required")
+
+
+        try:
+            mobile = request.data.get("mobile")
+        except:
+            raise exceptions.ValidationError("mobile is required")
+
+
+        try:
+            picture = request.data.get("picture")
+        except:
+            pass
+
+        try:
+            father_name = request.data.get("father_name")
+        except:
+            raise exceptions.ValidationError("father_name is required")
+
+
+        profile = Profile.objects.create(user=user, email= email, first_name= first_name,
+                                         last_name= last_name, national_code= national_code, date_birth= date_birth,
+                                         gender = gender, marital = marital,  mobile = mobile, father_name = father_name)
+
+
+        profile.save()
+
+        return Response({'username':user.username, 'password' : user.password, 'first_name' : first_name}, status=status.HTTP_201_CREATED)
+
+        #
+        # profile_serialized = serializers.serialize('json', profile)
+        # profile_json = json.loads(profile_serialized)
+        # profile_json = profile_json[0]
+        #
+        # user_json.update(profile_json)
+
 
 
 class UserEditAPIView(generics.GenericAPIView):

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Profile,  Hamkari, Farakhan, Profile_present, Profile_ready, Hamkari_code, Post
+from .models import Profile,  Hamkari, Farakhan, Profile_present, Profile_ready, Hamkari_code, Post, Picture_farakhan
 from django_jalali.admin.filters import JDateFieldListFilter
 
 # Register your models here.
@@ -44,10 +44,16 @@ class Profile_readyAdmin(admin.ModelAdmin):
     search_fields = ('profile__user__username', 'farakhan')
 
 
+class Picture_farakhanAdmin(admin.ModelAdmin):
+    list_display = ('farakhan',)
+    search_fields = ('farakhan',)
+
+
 admin.site.register(Profile, ProfileAdmin)
 admin.site.register(Hamkari, HamkariAdmin)
 admin.site.register(Hamkari_code, Hamkari_codeAdmin)
 admin.site.register(Farakhan, FarakhanAdmin)
 admin.site.register(Profile_present, Profile_presentAdmin)
 admin.site.register(Profile_ready, Profile_readyAdmin)
+admin.site.register(Picture_farakhan, Picture_farakhanAdmin)
 # admin.site.register(Post, PostAdmin)

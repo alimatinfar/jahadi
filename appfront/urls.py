@@ -13,10 +13,11 @@ urlpatterns = [
     url(r'^login/$', views.Login, name='login'),
     url(r'^logout/$', views.Logout, name='logout'),
     url(r'^register/$', views.register, name='register'),
-    url(r'^gallery/$', views.gallery, name='gallery'),
+    url(r'^gallery/(?P<id>[0-9]+)$', views.gallery, name='gallery'),
     url(r'^folder_gallery/$', views.folder_gallery, name='folder_gallery'),
     url(r'^farakhan_detail/(?P<id>[0-9]+)$', views.farakhan_detail, name='farakhan_detail'),
     url(r'^farakhan_detail_sherkat/(?P<id>[0-9]+)$', views.farakhan_detail_sherkat, name='farakhan_detail_sherkat'),
     url(r'^success/$', views.success, name='success'),
+    url(r'^test/$', views.test, name='test'),
 
 ]

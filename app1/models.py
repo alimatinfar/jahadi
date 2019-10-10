@@ -1,7 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from ckeditor_uploader.fields import RichTextUploadingField
-from django_jalali.db import models as jmodels#تاریخ جلالی
+from django_jalali.db import models as jmodels  # تاریخ جلالی
+
 
 # Create your models here.
 
@@ -28,9 +29,9 @@ class Profile(models.Model):
     mobile = models.CharField('موبایل', max_length=15)
     picture = models.ImageField('عکس', null=True, blank=True)
     father_name = models.CharField('نام پدر', max_length=200)
-
-    def __str__(self):
-        return (self.user.username)
+    #
+    # def __str__(self):
+    #     return (self.user.username)
 
     class Meta:
         verbose_name = 'profile'
@@ -107,7 +108,6 @@ class Profile_ready(models.Model):
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     farakhan = models.ForeignKey(Farakhan, on_delete=models.CASCADE)
 
-
     class Meta:
         verbose_name = 'profile_ready'
         verbose_name_plural = ' لیست افراد آماده در فراخوان'
@@ -121,8 +121,17 @@ class Profile_present(models.Model):
         verbose_name = 'profile_present'
         verbose_name_plural = ' لیست افراد حاضر در فراخوان'
 
+
 class Post(models.Model):
     title = models.CharField(max_length=100)
     content = RichTextUploadingField()
     date = jmodels.jDateField()
 
+
+class Picture_farakhan(models.Model):
+    farakhan = models.ForeignKey(Farakhan, on_delete=models.CASCADE)
+    picture = models.ImageField()
+
+    class Meta:
+        verbose_name = 'picture_farakhan'
+        verbose_name_plural = 'تصاویر فراخوان ها'

@@ -35,294 +35,32 @@
 {% block content %}
 
     <div class="container">
-        <div class="row" style="margin-top: 30px">
-            <div class="gallery">
-                <a target="_blank" href="{% static 'img/1.jpg' %}">
-                    <img src="{% static 'img/1.jpg' %}" alt="1" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-            </div>
+        <div class="row" style="margin-top: 30px" id="picture">
 
-            <div class="gallery">
-                <a target="_blank" href="{% static 'img/1.jpg' %}">
-                    <img src="{% static 'img/1.jpg' %}" alt="2" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-            </div>
-
-            <div class="gallery">
-                <a target="_blank" href="{% static 'img/1.jpg' %}">
-                    <img src="{% static 'img/1.jpg' %}" alt="3 " width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-            </div>
-
-            <div class="gallery">
-                <a target="_blank" href="{% static 'img/1.jpg' %}">
-                    <img src="{% static 'img/1.jpg' %}" alt="4" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-            </div>
-            <div class="gallery">
-                <a target="_blank" href="{% static 'img/1.jpg' %}">
-                    <img src="{% static 'img/1.jpg' %}" alt="5" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-            </div>
-        </div>
-        <div class="row" style="margin-top: 10px">
-            <div class="gallery">
-                <a target="_blank" href="{% static 'img/1.jpg' %}">
-                    <img src="{% static 'img/1.jpg' %}" alt="1" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-            </div>
-
-            <div class="gallery">
-                <a target="_blank" href="{% static 'img/1.jpg' %}">
-                    <img src="{% static 'img/1.jpg' %}" alt="2" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-            </div>
-
-            <div class="gallery">
-                <a target="_blank" href="{% static 'img/1.jpg' %}">
-                    <img src="{% static 'img/1.jpg' %}" alt="3 " width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-            </div>
-
-            <div class="gallery">
-                <a target="_blank" href="{% static 'img/1.jpg' %}">
-                    <img src="{% static 'img/1.jpg' %}" alt="4" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-            </div>
-            <div class="gallery">
-                <a target="_blank" href="{% static 'img/1.jpg' %}">
-                    <img src="{% static 'img/1.jpg' %}" alt="5" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-            </div>
         </div>
     </div>
+
 
 {% endblock %}
 
-<!-- gallery-->
+
+{% block extrajs %}
+
+    <!-- selects js -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+
+    <script>
+        picture_url =
+        {{ picture_url|safe }}
 
 
-<!-- My Own Gallery Code
-
-
-<div class="container" style="background-color: silver;height: 1100px">
-    <div class="row" style="background-color: #e83e8c">
-        <div class="col-md-3 mt-lg-5" style="background-color: #15a6eb;text-align: center">
-            <div>
-                <a href="#">
-                    <img src="1.jpg" style="height: 110px;width: 170px;display: block"class="mx-auto mt-auto">
-                </a>
-                <a href="#">
-                    <p class="mt-2">بروجرد 98/3</p>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-3 mt-lg-5" style="background-color: #a71d2a;text-align: center"">
-        <div>
-            <a>
-                <img src="1.jpg" style="height: 110px;width: 170px;display: block"class="mx-auto my-auto">
-            </a>
-            <a>
-                <p>بروجرد 98/3</p>
-            </a>
-        </div>
-        </div>
-        <div class="col-md-3 mt-lg-5" style="background-color: #e6db74;text-align: center"">
-        <div>
-            <a>
-                <img src="1.jpg" style="height: 110px;width: 170px;display: block"class="mx-auto my-auto">
-            </a>
-            <a>
-                <p>بروجرد 98/3</p>
-            </a>
-        </div>
-        </div>
-        <div class="col-md-3 mt-lg-5" style="background-color: #abdde5;text-align: center">
-            <div>
-                <a>
-                <img src="1.jpg" style="height: 110px;width: 170px;display: block"class="mx-auto my-auto">
-            </a>
-            <a>
-                <p>بروجرد 98/3</p>
-            </a>
-            </div>
-        </div>
-    </div><div class="row" style="background-color: #1b1e21">
-        <div class="col-md-3 mt-lg-2" style="background-color: #15a6eb;text-align: center">
-            <div>
-                <a>
-                    <img src="1.jpg" style="height: 110px;width: 170px;display: block"class="mx-auto my-auto">
-                </a>
-                <a>
-                    <p>بروجرد 98/3</p>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-3 mt-lg-2" style="background-color: #a71d2a;text-align: center"">
-        <div>
-            <a>
-                <img src="1.jpg" style="height: 110px;width: 170px;display: block"class="mx-auto my-auto">
-            </a>
-            <a>
-                <p>بروجرد 98/3</p>
-            </a>
-        </div>
-        </div>
-        <div class="col-md-3 mt-lg-2" style="background-color: #e6db74;text-align: center"">
-        <div>
-            <a>
-                <img src="1.jpg" style="height: 110px;width: 170px;display: block"class="mx-auto my-auto">
-            </a>
-            <a>
-                <p>بروجرد 98/3</p>
-            </a>
-        </div>
-        </div>
-        <div class="col-md-3 mt-lg-2" style="background-color: #abdde5;text-align: center">
-            <div>
-                <a>
-                    <img src="1.jpg" style="height: 110px;width: 170px;display: block"class="mx-auto my-auto">
-                </a>
-                <a>
-                    <p>بروجرد 98/3</p>
-                </a>
-            </div>
-        </div>
-    </div><div class="row" style="background-color: #1e7e34">
-        <div class="col-md-3 mt-lg-2" style="background-color: #15a6eb;text-align: center">
-            <div>
-                <a>
-                    <img src="1.jpg" style="height: 110px;width: 170px;display: block"class="mx-auto my-auto">
-                </a>
-                <a>
-                    <p>بروجرد 98/3</p>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-3 mt-lg-2" style="background-color: #a71d2a;text-align: center"">
-        <div>
-            <a>
-                <img src="1.jpg" style="height: 110px;width: 170px;display: block"class="mx-auto my-auto">
-            </a>
-            <a>
-                <p>بروجرد 98/3</p>
-            </a>
-        </div>
-        </div>
-        <div class="col-md-3 mt-lg-2" style="background-color: #e6db74;text-align: center"">
-        <div>
-            <a>
-                <img src="1.jpg" style="height: 110px;width: 170px;display: block"class="mx-auto my-auto">
-            </a>
-            <a>
-                <p>بروجرد 98/3</p>
-            </a>
-        </div>
-        </div>
-        <div class="col-md-3 mt-lg-2" style="background-color: #abdde5;text-align: center">
-            <div>
-                <a>
-                    <img src="1.jpg" style="height: 110px;width: 170px;display: block"class="mx-auto my-auto">
-                </a>
-                <a>
-                    <p>بروجرد 98/3</p>
-                </a>
-            </div>
-        </div>
-    </div><div class="row" style="background-color: #e4606d">
-        <div class="col-md-3 mt-lg-2" style="background-color: #15a6eb;text-align: center">
-            <div>
-                <a>
-                    <img src="1.jpg" style="height: 110px;width: 170px;display: block"class="mx-auto my-auto">
-                </a>
-                <a>
-                    <p>بروجرد 98/3</p>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-3 mt-lg-2" style="background-color: #a71d2a;text-align: center"">
-        <div>
-            <a>
-                <img src="1.jpg" style="height: 110px;width: 170px;display: block"class="mx-auto my-auto">
-            </a>
-            <a>
-                <p>بروجرد 98/3</p>
-            </a>
-        </div>
-        </div>
-        <div class="col-md-3 mt-lg-2" style="background-color: #e6db74;text-align: center"">
-        <div>
-            <a>
-                <img src="1.jpg" style="height: 110px;width: 170px;display: block"class="mx-auto my-auto">
-            </a>
-            <a>
-                <p>بروجرد 98/3</p>
-            </a>
-        </div>
-        </div>
-        <div class="col-md-3 mt-lg-2" style="background-color: #abdde5;text-align: center">
-            <div>
-                <a>
-                    <img src="1.jpg" style="height: 110px;width: 170px;display: block"class="mx-auto my-auto">
-                </a>
-                <a>
-                    <p>بروجرد 98/3</p>
-                </a>
-            </div>a>
-        </div>
-    </div><div class="row" style="background-color: #e0a800">
-        <div class="col-md-3 mt-lg-2" style="background-color: #15a6eb;text-align: center">
-            <div>
-                <a>
-                    <img src="1.jpg" style="height: 110px;width: 170px;display: block"class="mx-auto my-auto">
-                </a>
-                <a>
-                    <p>بروجرد 98/3</p>
-                </a>
-            </div></a>
-        </div>
-        <div class="col-md-3 mt-lg-2" style="background-color: #a71d2a;text-align: center"">
-        <div>
-            <a>
-                <img src="1.jpg" style="height: 110px;width: 170px;display: block"class="mx-auto my-auto">
-            </a>
-            <a>
-                <p>بروجرد 98/3</p>
-            </a>
-        </div>
-        </a>
-        </div>
-        <div class="col-md-3 mt-lg-2" style="background-color: #e6db74;text-align: center"">
-        <div>
-            <a>
-                <img src="1.jpg" style="height: 110px;width: 170px;display: block"class="mx-auto my-auto">
-            </a>
-            <a>
-                <p>بروجرد 98/3</p>
-            </a>
-        </div>
-        </div>
-        <div class="col-md-3 mt-lg-2" style="background-color: #abdde5;text-align: center">
-            <div>
-                <a>
-                    <img src="1.jpg" style="height: 110px;width: 170px;display: block"class="mx-auto my-auto">
-                </a>
-                <a>
-                    <p>بروجرد 98/3</p>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
--->
+        for (i = 0; i < picture_url.length; i++) {
+            $("#picture").append("<div class=\"gallery\">\n" +
+                "                <a target=\"_blank\" href=" + picture_url[i] + ">\n" +
+                "                    <img src=" + picture_url[i] + " alt=\"2\" width=\"600\" height=\"400\">\n" +
+                "                </a>\n" +
+                "                <div class=\"desc\">Add a description of the image here</div>\n" +
+                "            </div>");
+        }
+    </script>
+{% endblock %}

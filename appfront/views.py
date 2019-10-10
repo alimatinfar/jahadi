@@ -1,12 +1,16 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout, authenticate, login
-from app1.models import Hamkari, Farakhan, Profile_ready, User
+from app1.models import Hamkari, Farakhan, Profile_ready, User, Picture_farakhan
 from datetime import date
 from kavenegar import *
+import jdatetime
 
 
 # Create your views here.
 def index(request):
+    last_login = ''
+    if request.user.is_authenticated:
+        last_login = str(jdatetime.date.fromgregorian(date=request.user.last_login))
     farakhan = Farakhan.objects.filter(date_first__gte=date.today())
     farakhan_place = []
     farakhan_title = []
@@ -23,21 +27,60 @@ def index(request):
         'farakhan_title': farakhan_title,
         'farakhan_date_f': farakhan_date_f,
         'farakhan_id': farakhan_id,
+        'last_login': last_login,
     }
 
     print('vared login shod')
     return render(request, 'index.html', context=context)
 
 
-def gallery(request):
-    return render(request, 'gallery.html')
+def gallery(request, id=None):
+    last_login = ''
+    if request.user.is_authenticated:
+        last_login = str(jdatetime.date.fromgregorian(date=request.user.last_login))
+
+
+    farakhan_id = Farakhan.objects.get(id = id)
+    picture = Picture_farakhan.objects.filter(farakhan = farakhan_id)
+
+    picture_url = []
+    for i in picture:
+        picture_url.append(i.picture.url)
+
+
+    context = {
+        'last_login': last_login,
+        'picture_url' : picture_url,
+    }
+    return render(request, 'gallery.html', context= context)
 
 
 def folder_gallery(request):
-    return render(request, 'folder_gallery.html')
+    last_login = ''
+    if request.user.is_authenticated:
+        last_login = str(jdatetime.date.fromgregorian(date=request.user.last_login))
+
+    farakhan = Farakhan.objects.all()
+    farakhan_title = []
+    farakhan_id = []
+    for i in farakhan:
+        farakhan_title.append(i.farakhan_title)
+        farakhan_id.append(i.id)
+    range = len(farakhan_id)
+    context = {
+        'last_login': last_login,
+        'farakhan_title': farakhan_title,
+        'farakhan_id': farakhan_id,
+        'range' : range,
+    }
+    return render(request, 'folder_gallery.html', context=context)
 
 
 def register(request):
+    last_login = ''
+    if request.user.is_authenticated:
+        last_login = str(jdatetime.date.fromgregorian(date=request.user.last_login))
+
     if request.method == 'POST':
         receptor = request.POST.get('mobile')
         print('vared sms shod')
@@ -46,7 +89,7 @@ def register(request):
         params = {'sender': '1000596446', 'receptor': receptor, 'message': 'سلام جواد جون!!!!!!!!!!!!!!!!!!!'}
         response = api.sms_send(params)
         print(response)
-        return redirect('appfront:index')
+        return redirect('appfront:login')
 
     users = User.objects.all()
     username_list = []
@@ -54,42 +97,67 @@ def register(request):
         username_list.append(i.username)
 
     context = {
-        'username_list' : username_list,
+        'username_list': username_list,
+        'last_login': last_login,
     }
 
-    return render(request, 'register.html', context= context)
+    return render(request, 'register.html', context=context)
 
 
 def cooperation(request):
+    last_login = ''
+    if request.user.is_authenticated:
+        last_login = str(jdatetime.date.fromgregorian(date=request.user.last_login))
     id_profile = request.user.profile.id
 
     context = {
         'id_profile': id_profile,
+        'last_login': last_login,
     }
     return render(request, 'cooperation.html', context=context)
 
 
 def cooperation_code(request):
-    return render(request, 'cooperation_code.html')
+    last_login = ''
+    if request.user.is_authenticated:
+        last_login = str(jdatetime.date.fromgregorian(date=request.user.last_login))
+    context = {
+        'last_login': last_login,
+    }
+    return render(request, 'cooperation_code.html', context=context)
 
 
 def edit_profile(request, id=None):
+    last_login = ''
     if request.user.is_authenticated:
+        last_login = str(jdatetime.date.fromgregorian(date=request.user.last_login))
+
         id_profile = request.user.profile.id
         id_user = request.user.id
 
         context = {
             'id_profile': id_profile,
             'id_user': id_user,
+            'last_login': last_login,
         }
-        return render(request, 'edit_profile.html', context= context)
+        return render(request, 'edit_profile.html', context=context)
 
 
 def create_farakhan(request):
-    return render(request, 'create_farakhan.html')
+    last_login = ''
+    if request.user.is_authenticated:
+        last_login = str(jdatetime.date.fromgregorian(date=request.user.last_login))
+    context = {
+        'last_login': last_login,
+    }
+    return render(request, 'create_farakhan.html', context=context)
 
 
 def farakhan_detail(request, id=None):
+    last_login = ''
+    if request.user.is_authenticated:
+        last_login = str(jdatetime.date.fromgregorian(date=request.user.last_login))
+
     if request.method == 'POST':
         print('vared post shod')
         username = request.POST.get('username')
@@ -131,21 +199,36 @@ def farakhan_detail(request, id=None):
             'id_profile': id_profile,
             'id_farakhan': id_farakhan,
             'farakhan_content': farakhan_content,
+            'last_login': last_login,
         }
 
         return render(request, 'farakhan_detail.html', context=context)
 
 
 def farakhan_detail_sherkat(request, id=None):
-    return render(request, 'farakhan_detail_sherkat.html')
+    last_login = ''
+    if request.user.is_authenticated:
+        last_login = str(jdatetime.date.fromgregorian(date=request.user.last_login))
+    context = {
+        'last_login': last_login,
+    }
+    return render(request, 'farakhan_detail_sherkat.html', context=context)
 
 
 def success(request):
-    return render(request, 'success.html')
+    last_login = ''
+    if request.user.is_authenticated:
+        last_login = str(jdatetime.date.fromgregorian(date=request.user.last_login))
+    context = {
+        'last_login': last_login,
+    }
+    return render(request, 'success.html', context=context)
 
 
 def profile(request):
+    last_login = ''
     if request.user.is_authenticated:
+        last_login = str(jdatetime.date.fromgregorian(date=request.user.last_login))
 
         username = request.user.username
         first_name = request.user.profile.first_name
@@ -240,6 +323,7 @@ def profile(request):
             'farakhan_ready_place': farakhan_ready_place,
             'id_user': id_user,
             'id_profile': id_profile,
+            'last_login': last_login,
         }
 
         return render(request, 'profile.html', context=info)
@@ -248,6 +332,12 @@ def profile(request):
 
 
 def Login(request):
+    last_login = ''
+    if request.user.is_authenticated:
+        last_login = str(jdatetime.date.fromgregorian(date=request.user.last_login))
+    context = {
+        'last_login': last_login,
+    }
     if request.method == 'POST':
         print('vared shoddddddddddddddddddddddddddddddddddddd')
         if request.user.is_authenticated:
@@ -266,10 +356,14 @@ def Login(request):
             return redirect('appfront:login')
     else:
         print('vared login shod')
-        return render(request, 'login.html')
+        return render(request, 'login.html', context=context)
 
 
 def Logout(request):
     if request.user.is_authenticated:
         logout(request)
         return redirect('appfront:index')
+
+
+def test(request):
+    return render(request, 'test.html')

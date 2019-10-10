@@ -3,7 +3,7 @@
   <component name="FacetManager">
     <facet type="django" name="Django">
       <configuration>
-        <option name="rootFolder" value="$MODULE_DIR$/src/active-users" />
+        <option name="rootFolder" value="$MODULE_DIR$" />
         <option name="settingsModule" value="jahadi/settings.py" />
         <option name="manageScript" value="$MODULE_DIR$/manage.py" />
         <option name="environment" value="&lt;map/&gt;" />
@@ -21,7 +21,7 @@
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/src/active-users/active_users/tests/test_app/templates" />
+        <option value="$MODULE_DIR$/appfront/templates" />
       </list>
     </option>
   </component>

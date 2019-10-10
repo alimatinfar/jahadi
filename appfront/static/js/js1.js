@@ -21,6 +21,7 @@ if (isLoggedIn) {
 
 function checkLogForHamkari() {
     if (isLoggedIn) {
+        debugger;
         var form = new FormData();
 
         form.append("profile", id_profile);

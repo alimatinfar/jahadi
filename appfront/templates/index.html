@@ -91,6 +91,15 @@
     </ul>
     <ul class="navbar-nav " id="leftnav"
         style="float: left;background-clor: khaki;margin-right: auto;margin-left: 50px">
+        {% if user.is_authenticated %}
+        <li class="nav-item" style="float: left">
+            <a class="nav-link" href="{% url 'appfront:profile' %}" style="color: ivory ;float: left">سلام {{ user.username }}!</a>
+        </li>
+        <li class="nav-item" style="float: left">
+            <a class="nav-link" style="color: ivory ;float: left">آخرین ورود شما : {{ last_login }}!</a>
+        </li>
+        {% endif %}
+
         <li class="nav-item " style="float: left">
             <a class="nav-link rounded" href="{% url 'appfront:register' %}"
                style="color: ivory ;float: left;background-color: forestgreen;width: 90px;text-align: center">ثبت
@@ -99,6 +108,7 @@
         <li class="nav-item" style="float: left">
             <a class="nav-link" href="{% url 'appfront:login' %}" style="color: ivory ;float: left">ورود</a>
         </li>
+
     </ul>
 </nav>
 
