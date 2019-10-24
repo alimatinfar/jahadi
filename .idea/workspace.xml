@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0e2199d-7536-4f18-88ba-e0d113928ef4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/appfront/static/js/form-validation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appfront/static/js/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appfront/templates/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jahadi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jahadi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app1/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app1/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app1/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appfront/static/js/forms/form-data-register.js" beforeDir="false" afterPath="$PROJECT_DIR$/appfront/static/js/forms/form-data-register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appfront/static/js/js1.js" beforeDir="false" afterPath="$PROJECT_DIR$/appfront/static/js/js1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appfront/static/js/form-validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/appfront/static/js/form-validation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appfront/templates/cooperation.html" beforeDir="false" afterPath="$PROJECT_DIR$/appfront/templates/cooperation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appfront/templates/cooperation_code.html" beforeDir="false" afterPath="$PROJECT_DIR$/appfront/templates/cooperation_code.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appfront/templates/create_farakhan.html" beforeDir="false" afterPath="$PROJECT_DIR$/appfront/templates/create_farakhan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appfront/templates/dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/appfront/templates/edit_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/appfront/templates/edit_profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appfront/templates/farakhan_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/appfront/templates/farakhan_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appfront/templates/folder_gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/appfront/templates/folder_gallery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appfront/templates/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/appfront/templates/gallery.html" afterDir="false" />
@@ -22,14 +16,6 @@
       <change beforePath="$PROJECT_DIR$/appfront/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/appfront/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appfront/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/appfront/templates/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appfront/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/appfront/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appfront/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/appfront/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appfront/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/appfront/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fandogh.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jahadi/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/jahadi/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/active-users" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pip-delete-this-directory.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,43 +28,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appfront/templates/folder_gallery.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="204">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appfront/models.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appfront/templates/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-781">
-              <caret line="40" selection-start-line="40" selection-end-line="45" selection-end-column="18" />
-              <folding>
-                <element signature="e#646#679#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/appfront/templates/gallery.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appfront/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -86,8 +46,49 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appfront/templates/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="236" column="15" lean-forward="true" selection-start-line="236" selection-end-line="237" />
+            <state relative-caret-position="170">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appfront/templates/register.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="181" column="60" lean-forward="true" selection-start-line="181" selection-start-column="60" selection-end-line="181" selection-end-column="60" />
+              <folding>
+                <element signature="e#335#366#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/appfront/static/js/form-validation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appfront/static/js/jquery.validate.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appfront/templates/farakhan_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -95,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appfront/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="47" column="41" lean-forward="true" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+            <state relative-caret-position="-322">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -105,37 +106,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app1/models.py">
+        <entry file="file://$PROJECT_DIR$/appfront/templates/create_farakhan.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app1/admin.py">
+        <entry file="file://$PROJECT_DIR$/appfront/templates/edit_profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="52" column="42" lean-forward="true" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app1/api/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2686">
-              <caret line="185" column="9" selection-start-line="185" selection-start-column="9" selection-end-line="185" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -151,6 +134,7 @@
       <find>Login</find>
       <find>Profile</find>
       <find>id</find>
+      <find>&lt;title&gt;</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,30 +143,35 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/appfront/templates/cooperation.html" />
-        <option value="$PROJECT_DIR$/appfront/templates/cooperation_code.html" />
-        <option value="$PROJECT_DIR$/appfront/templates/login.html" />
-        <option value="$PROJECT_DIR$/appfront/templates/farakhan_detail.html" />
         <option value="$PROJECT_DIR$/appfront/static/js/js1.js" />
         <option value="$PROJECT_DIR$/app1/api/views.py" />
         <option value="$PROJECT_DIR$/appfront/static/js/forms/form-data-register.js" />
-        <option value="$PROJECT_DIR$/appfront/templates/register.html" />
-        <option value="$PROJECT_DIR$/appfront/static/js/form-validation.js" />
-        <option value="$PROJECT_DIR$/appfront/templates/index.html" />
         <option value="$PROJECT_DIR$/appfront/urls.py" />
         <option value="$PROJECT_DIR$/app1/admin.py" />
         <option value="$PROJECT_DIR$/app1/models.py" />
         <option value="$PROJECT_DIR$/appfront/templates/test.html" />
+        <option value="$PROJECT_DIR$/appfront/templates/dashboard.html" />
+        <option value="$PROJECT_DIR$/appfront/templates/cooperation.html" />
+        <option value="$PROJECT_DIR$/appfront/templates/cooperation_code.html" />
+        <option value="$PROJECT_DIR$/appfront/templates/create_farakhan.html" />
+        <option value="$PROJECT_DIR$/appfront/templates/edit_profile.html" />
+        <option value="$PROJECT_DIR$/appfront/templates/farakhan_detail.html" />
         <option value="$PROJECT_DIR$/appfront/templates/folder_gallery.html" />
-        <option value="$PROJECT_DIR$/appfront/views.py" />
         <option value="$PROJECT_DIR$/appfront/templates/gallery.html" />
+        <option value="$PROJECT_DIR$/appfront/templates/login.html" />
+        <option value="$PROJECT_DIR$/appfront/templates/profile.html" />
+        <option value="$PROJECT_DIR$/appfront/templates/register.html" />
+        <option value="$PROJECT_DIR$/appfront/templates/index.html" />
+        <option value="$PROJECT_DIR$/appfront/views.py" />
+        <option value="$PROJECT_DIR$/appfront/static/js/form-validation.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
-    <option name="width" value="980" />
-    <option name="height" value="1040" />
+    <option name="y" value="-10" />
+    <option name="width" value="1080" />
+    <option name="height" value="585" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -199,23 +188,26 @@
             <path>
               <item name="jahadi" type="b2602c69:ProjectViewProjectNode" />
               <item name="jahadi" type="462c0819:PsiDirectoryNode" />
-              <item name="app1" type="462c0819:PsiDirectoryNode" />
+              <item name="appfront" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jahadi" type="b2602c69:ProjectViewProjectNode" />
               <item name="jahadi" type="462c0819:PsiDirectoryNode" />
               <item name="appfront" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jahadi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jahadi" type="462c0819:PsiDirectoryNode" />
+              <item name="appfront" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jahadi" type="b2602c69:ProjectViewProjectNode" />
               <item name="jahadi" type="462c0819:PsiDirectoryNode" />
               <item name="appfront" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jahadi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jahadi" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -287,18 +279,20 @@
       <workItem from="1570299688895" duration="6580000" />
       <workItem from="1570614463431" duration="4724000" />
       <workItem from="1570691397109" duration="3616000" />
-      <workItem from="1570700158306" duration="3529000" />
+      <workItem from="1570700158306" duration="6488000" />
+      <workItem from="1570795334242" duration="895000" />
+      <workItem from="1571887951048" duration="2082000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34153000" />
+    <option name="totallyTimeSpent" value="40089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26340482" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27010724" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -325,28 +319,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/appfront/templates/cooperation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4540">
-          <caret line="287" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="287" />
-          <folding>
-            <element signature="e#9829#9885#0#HTML" expanded="true" />
-            <element signature="e#20456#20505#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appfront/templates/cooperation_code.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-67">
-          <caret line="292" column="26" lean-forward="true" selection-start-line="292" selection-start-column="26" selection-end-line="292" selection-end-column="26" />
-          <folding>
-            <element signature="e#630#649#0#HTML" expanded="true" />
-            <element signature="e#11932#11981#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/appfront/static/js/forms/form-data-login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-492">
@@ -375,54 +347,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appfront/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="84" column="47" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="47" />
-          <folding>
-            <element signature="e#6937#6986#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appfront/static/js/form-validation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appfront/static/js/jquery.validate.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/appfront/static/js/forms/form-data-register.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appfront/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3009">
-          <caret line="177" selection-start-line="177" selection-end-line="187" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appfront/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
-          <caret line="98" column="83" selection-start-line="98" selection-start-column="83" selection-end-line="98" selection-end-column="83" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#li#1;n#ul#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appfront/templates/farakhan_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="85" column="60" selection-start-line="85" selection-start-column="60" selection-end-line="85" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -439,13 +367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appfront/templates/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="236" column="15" lean-forward="true" selection-start-line="236" selection-end-line="237" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/appfront/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -456,7 +377,7 @@
     <entry file="file://$PROJECT_DIR$/app1/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
-          <caret line="52" column="42" lean-forward="true" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+          <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
@@ -473,40 +394,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appfront/templates/folder_gallery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/appfront/models.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app1/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
-          <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appfront/views.py">
+    <entry file="file://$PROJECT_DIR$/appfront/templates/dashboard.html" />
+    <entry file="file://$PROJECT_DIR$/appfront/templates/cooperation.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="47" column="41" lean-forward="true" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appfront/templates/cooperation_code.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appfront/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appfront/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appfront/templates/folder_gallery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/appfront/templates/gallery.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appfront/templates/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appfront/templates/farakhan_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appfront/templates/create_farakhan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appfront/templates/edit_profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appfront/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-322">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appfront/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="181" column="60" lean-forward="true" selection-start-line="181" selection-start-column="60" selection-end-line="181" selection-end-column="60" />
+          <folding>
+            <element signature="e#335#366#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appfront/static/js/jquery.validate.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appfront/static/js/form-validation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
         </state>
       </provider>
     </entry>

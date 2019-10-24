@@ -10,6 +10,14 @@ $(document).ready(function () {
             'Invalid phone number.'
         );
 
+        $.validator.addMethod(
+            "regex",
+            function (value, element, regexp) {
+                return this.optional(element) || regexp.test(value);
+            },
+            "Please check your input."
+        );
+
         // [ Initialize validation ] start
         $('#validation-form123').validate({
             ignore: '.ignore, .select2-input',
@@ -34,9 +42,10 @@ $(document).ready(function () {
                 },
                 'mobile': {
                     required: true,
-                    digits: true,
-                    minlength: 10,
-                    maxlength: 12
+                    regex: /^[0-9]{3}$/
+                    // digits: true,
+                    // minlength: 10,
+                    // maxlength: 12
                 },
                 'national_code': {
                     required: true,
@@ -76,9 +85,10 @@ $(document).ready(function () {
                 },
                 'mobile': {
                     required: "این فیلد را پر کنید!",
-                    minlength: "حداقل 10 عدد وارد کنید!",
-                    maxlength: "کمتر از 12 عدد وارد کنید!",
-                    digits: "لطفا فقط عدد وارد بفرمایید!"
+                    regex: "REGEX"
+                    // minlength: "حداقل 10 عدد وارد کنید!",
+                    // maxlength: "کمتر از 12 عدد وارد کنید!",
+                    // digits: "لطفا فقط عدد وارد بفرمایید!"
                 },
                 'national_code': {
                     required: "این فیلد را پر کنید!",
