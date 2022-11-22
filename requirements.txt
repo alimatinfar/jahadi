@@ -20,7 +20,7 @@ idna==2.8
 jdatetime==3.6.0
 kavenegar==1.1.2
 Markdown==3.1.1
-Pillow==6.1.0
+Pillow==9.3.0
 pycparser==2.19
 pyOpenSSL==19.0.0
 pytz==2019.1
